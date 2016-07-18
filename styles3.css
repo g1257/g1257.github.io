@@ -1,0 +1,320 @@
+td.myhashes {
+        font-family: monospace;
+	line-height: 25px;
+        font-size: 16px;
+        padding-left: 25px;
+}
+
+h3 {
+	margin-top:20px;
+	margin-bottom: 10px;
+}
+
+.myemph {
+	font-weight: bold;
+}
+
+a[href^="http://"]:after {
+	content: url(IconExternalLinkRed.png);
+	padding-right: 5px;	
+}
+
+a[href^="https://"]:after {
+	content: url(Icon_External_Link.png);
+	padding-right: 5px;
+}
+
+a[href*="//web.ornl.gov/"]:after {
+	content: '';
+	margin: 0;
+}
+
+.greenok {
+	background: #2ECC40;
+}
+
+.redbad {
+	background: #FF4136;
+}
+
+@media only screen and (min-width:1024px) {
+
+body, div, h1, h2, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	background:  #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+/* unvisited link */
+a:link {
+	color: #0074d9;
+	text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+	color: #0074d9;
+	text-decoration: none;
+}
+
+#all1 {
+	width: 100%;
+	background:  #ffffff;
+}
+
+#header {
+	display: block;
+	height: 50px;
+	background: #0074d9;
+}
+
+#nav1 {
+	margin: 0px auto; 
+	background: #0074d9;
+	text-align: center;
+}
+
+#nav1 ul ul {
+	display: none;
+}
+
+	#nav1 ul li:hover > ul {
+		display: block;
+	}
+
+
+#nav1 ul {
+	background: #0074d9;
+	padding: 0 20px;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+	#nav1 ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+	#nav1 ul li {
+		float: left;
+	}
+		#nav1 ul li:hover {
+			background: #69A5FF;
+		}
+			#nav1 ul li:hover a {
+				color: #fff;
+			}
+		
+		#nav1 ul li a {
+			display: block; padding: 25px 40px;
+			color: #dddddd;	
+			text-decoration: none;
+			font-size: 18px;
+			line-height: 28px;
+		}
+		
+	#nav1 ul ul {
+		background: #9EC5FF; padding: 0;
+		position: absolute; top: 100%;
+		text-align: left;
+	}
+		#nav1 ul ul li {
+			float: none; 
+			border-top: 1px solid #69A5FF;
+			border-bottom: 1px solid #CDE1FF; position: relative;
+		}
+			#nav1 ul ul li a {
+				padding: 15px 40px;
+				color: #fff;
+			}	
+				nav ul ul li a:hover {
+					background: #69A5FF;
+				}
+		
+	#nav1 ul ul ul {
+		position: absolute; left: 100%; top:0;
+	}
+
+#activeItem {
+	background: #69A5FF;
+}
+
+#leftcolumn {
+	width: 20%;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-width: 200px;
+	background: #fafafa;
+}
+
+#contents {
+	margin: 0 auto;
+	padding-left: 40px;
+	padding-bottom: 50px;
+	width: 50%;
+}
+
+#contentsNoPanel {
+	margin: 0 auto;
+	padding-left: 40px;
+	padding-bottom: 50px;
+	width: 50%;
+}
+
+#footer {
+	display: block;
+	clear: left;
+	width: 100%; 
+	height: 100%;
+	min-height: 50px;
+	text-align: center;
+	background: #ffffff;
+	color: #000000;
+	
+}
+
+#footer a:link {
+        color: #000000;
+	text-decoration: underline;
+}
+
+#footer a:visited {
+        color: #dddddd;
+	text-decoration: underline;
+}
+
+
+h2 {
+	font-weight: 600;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	color: #001f3f;
+}
+
+h1 {
+	font-weight: 700;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #001f3f;
+	text-align: center;
+}
+
+p {
+	font-variant-numeric: oldstyle-nums;
+	font-feature-settings: "onum";
+}
+
+.endofp {
+	display: block;
+	font-style: italic;
+	text-align: left;
+}
+
+.endofp a {
+	text-decoration: none;
+}
+
+.announce {
+	display: block;
+	background: #f6d000; 
+/* #FFEC7F;*/
+	padding: 2px 10px 10px 10px;
+	border: 2px solid #0074D9;
+}
+
+.calleft {
+	/* background: url(images/calendar.jpg) no-repeat center center; */
+	border-style: solid;
+	border-color: #0074d9;
+	border-width: thin;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 25px;
+	margin-right: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.calright {
+	padding-top: 10px;
+	display: block;
+	font-variant-numeric: oldstyle-nums;
+	font-feature-settings: "onum";
+}
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Open Sans Light"), local("OpenSans-Light"), url("https://g1257.github.io/fonts/opensans/OpenSans-Light.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 300;
+	src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("https://g1257.github.io/fonts/opensans/OpenSans-LightItalic.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Open Sans"), local("OpenSans"), url("https://g1257.github.io/fonts/opensans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 400;
+	src: local("Open Sans Italic"), local("OpenSans-Italic"), url("https://g1257.github.io/fonts/opensans/OpenSans-Italic.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("https://g1257.github.io/fonts/opensans/OpenSans-Semibold.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 600;
+	src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-SemiboldItalic.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://g1257.github.io/fonts/opensans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 700;
+	src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-BoldItalic.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 800;
+	src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url("https://g1257.github.io/fonts/opensans/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-style: italic;
+	font-weight: 800;
+	src: local("Open Sans Extrabold Italic"), local("OpenSans-ExtraboldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-ExtraBoldItalic.ttf");
+}
+
