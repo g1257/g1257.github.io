@@ -1,0 +1,505 @@
+%% In the US, letter size paper is used:
+\documentclass[letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{calc}
+\usepackage{lastpage}
+
+\definecolor{crimson}{RGB}{220,  20,  60}
+
+%% wasysym is needed for the two symbols below:
+\usepackage{wasysym}
+\newcommand{\uncheckedbox}{{\Large $\Square$}}
+\newcommand{\checkedbox}{{\Large $\XBox$}}
+\newcommand{\textinred}[1]{\textcolor{crimson}{#1}}
+\include{input}
+
+%% Seems like the official form uses arial
+%% We'll make it sans serif too:
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+%% Margins:
+\oddsidemargin -2cm
+\topmargin -2cm
+\headheight 12pt
+\headsep 0pt
+\textwidth 20.5cm
+\textheight 25cm
+\newlength{\textBigWidth}
+\setlength\textBigWidth{20.75cm}
+
+%% Headers and footers:
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{REV 03-08-2016 {\footnotesize \LaTeX}}
+\cfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+%% itemize
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+%     \setlength{\parskip}{0pt}
+%     \setlength{\parsep}{0pt}
+}
+{ \end{itemize}
+}
+
+\usepackage[pdftex , , colorlinks =true ,
+pdftitle ={CNMS Research Proposal} ,
+, pdfpagemode =UseNone ,pdfstartview = FitH ,
+pagebackref, pdfhighlight = { /N,urlcolor=blue}
+]{hyperref}
+
+\begin{document}
+% PAGE 1
+%% Header: logo and "read-only" part:
+\begin{Form}
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}m{11cm}>{\flushright}m{7cm}}
+
+\includegraphics[width=13cm]{CNMS_color.jpg}
+&
+\begin{tabular}{|p{6cm}|}\hline
+\emph{CNMS USE  ONLY} \\\\
+\TextField[name=pnumber]{Proposal Number:}\\
+\\\hline
+\\
+\TextField[name=pdate]{Date Received:}\\
+\\
+\hline
+\end{tabular}
+\end{tabular*}
+\end{center}
+\end{Form}
+
+\begin{small}
+\begin{center}
+{\bf \Large CENTER FOR NANOPHASE MATERIALS SCIENCES RESEARCH PROPOSAL}\vspace{0.2cm}\\
+\framebox[\textwidth]{
+\begin{minipage}[t]{18.6cm}
+Submit complete proposal package to: CNMS User Coordinator, Oak Ridge
+National Laboratory, Email: \textcolor{blue}{cnmsuser@ornl.gov}\\
+Your proposal package \textinred{\underline{must include}}: \\
+\hspace*{2cm}(1) Completed proposal form;\\
+\hspace*{2cm}(2) Two-page CV (NSF-style or similar) for the Principal Investigator only; and \\
+\hspace*{2cm}(3) Supplementary appendix for use of microanalysis facilities provided by SHaRE (if applicable).\\
+\end{minipage}
+}
+\end{center}
+
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|p{14cm}|p{4cm}|}\hline
+{\bf Title of Proposal: \formTitle} &  Date Submitted: \formDateSubmitted\hfill\\
+&\hfill\\
+&\hfill\\\hline
+\end{tabular*}
+\end{center}
+
+\begin{center}
+\begin{small}{\bf Principal Investigator---}
+\textinred{Responsible for progress of the project and primary point of contact for all correspondence from CNMS.}\end{small}\\
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|p{11cm}|p{7cm}|}\hline
+{\bf Name of PI: \formPIName } &  \formPIWillParticipateOnSite \,Check if PI will participate on-site at ORNL\hfill\\
+\end{tabular*}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|p{11cm}p{7cm}|}\hline
+Institution/Employer: \formPIInstitution &  Phone: \formPIPhone\\
+&\\
+Dept: \formPIDept &  Fax: \formPIFax\\
+&\\
+Street Address or P.O. Box: \formPIAddress &  Email: \formPIEmail \\
+&\\
+\multicolumn{2}{|l|}{
+City:  \formPICity\hspace{1cm}State/Prov.: \formPIState \hspace{0.5cm}    Country: \formPICountry \hspace{0.5cm}    Postal Code: \formPIPostalCode\hspace{1cm}
+Citizenship: \formPICitizenship}\\
+&\\\hline
+\end{tabular*}
+\end{center}
+
+\begin{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+{\bf Collaborators -} & List everyone else who will participate in this project, including students, postdocs, etc.\\
+& \begin{small}
+\textinred{{\it Only the PI and participants named below will be eligible for an ORNL badge authorized through this project.}}
+\end{small}\\
+\end{tabular*}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|>{\centering}p{3cm}|>{\centering}p{5cm}|>{\centering}p{1cm}|>{\centering}p{4cm}|p{2cm}|}\hline
+\small{\bf Name of Collaborator}\hspace{1cm} \textinred{\bf \footnotesize{(attach additional sheets if necessary)}}
+ & \bf \small{Institution/Employer and Address} &%
+\small{\bf Citizen-ship}
+&
+\small{\bf Email}
+&
+{\bf \footnotesize{Please
+Check If
+Participating On-Site}}
+\\\hline
+ \formCollaboratorOneName & \formCollaboratorOneInfo & \formCollaboratorOneCitizenship & \formCollaboratorOneEmail  & \multirow{3}{*}{\formCollaboratorOneOnSite}\\
+& & & &\\
+& & & &\\\hline
+ \formCollaboratorTwoName & \formCollaboratorTwoInfo & \formCollaboratorTwoCitizenship & \formCollaboratorTwoEmail  & \multirow{3}{*}{\formCollaboratorTwoOnSite}\\
+& & & &\\
+& & & &\\\hline
+ \formCollaboratorThreeName & \formCollaboratorThreeInfo & \formCollaboratorThreeCitizenship & \formCollaboratorThreeEmail  & \multirow{3}{*}{\formCollaboratorThreeOnSite}\\
+& & & &\\
+& & & &\\\hline
+ \formCollaboratorFourName & \formCollaboratorFourInfo & \formCollaboratorFourCitizenship & \formCollaboratorFourEmail  & \multirow{3}{*}{\formCollaboratorFourOnSite}\\
+& & & &\\
+& & & &\\\hline
+ \formCollaboratorFiveName & \formCollaboratorFiveInfo & \formCollaboratorFiveCitizenship & \formCollaboratorFiveEmail  & \multirow{3}{*}{\formCollaboratorFiveOnSite}\\
+& & & &\\
+& & & &\\\hline
+\end{tabular*}
+\end{center}
+
+
+
+
+% PAGE 2
+\pagebreak % force a break just to be sure
+\noindent\fbox{\parbox[t]{\textwidth}{
+\begin{center}{\bf CNMS Facilities Requested}\end{center}
+{
+Indicate below all facilities \emph{and the number of days for each} at CNMS that 
+will be required for this project. NOTE: CNMS reserves the right to refuse 
+access to any facility that is not marked on this page. The Research 
+Description section must describe how each of the selected facilities will be 
+used, including estimates of the quantities of materials/samples to be 
+synthesized or characterized and the estimated time required in each facility. 
+Users are encouraged to contact CNMS staff for assistance in estimating the 
+appropriate times and quantities.\\
+See \url{http://www.cnms.ornl.gov/capabilities/cap.shtm} for detailed descriptions of these facilities and list of contacts.
+}\\
+}}
+%
+% leave no spaces here
+%
+\fbox{\parbox[t]{12.0cm}{
+{\bf NANOMATERIALS SYNTHESIS AND FUNCTIONAL ASSEMBLY}\\
+\underline{MACROMOLECULAR NANOMATERIALS}
+\begin{myitemize}
+\item[\uncheckedbox] Polymer synthesis (Anionic, radical, cationic, and step growth polymerizations; composite materials)
+\item[\uncheckedbox] Synthesis of novel monomers and precursors
+\item[\uncheckedbox] Deuterated monomers, polymers
+\item[\uncheckedbox] 500 MHz Solution NMR Spectroscopy
+\item[\uncheckedbox] Macromolecular characterization- molecular weight, spectroscopy, scattering, thermal analysis (details on web site)
+\item[\uncheckedbox] Thin Film Characterization (ellipsometry, FTIR-ATR, FTIR microscopy, contact 
+angle goniometer)
+\end{myitemize}
+\underline{FUNCTIONAL HYBRID NANOMATERIALS}
+\begin{myitemize}
+\item[\uncheckedbox] Synthesis of Nanomaterials by CVD, PLD with in situ diagnostics---2D TMCs, 
+graphene; 1D SWNTs, NT Arrays, NWs; NPs, SWNHs
+\item[\uncheckedbox] Oxide Thin Film PLD with high-pressure RHEED---films, complex heterostructures, 
+PLD with RF sputtering and laser heating
+\item[\uncheckedbox] Laser Material Interactions and Processing with in situ diagnostics---heating, 
+patterning, thinning, structuring, transfer, with XY scanning
+\item[\uncheckedbox] Wet/Dry Assembly of Organic/Inorganic/Hybrid Films and Devices---dual glovebox 
+evaporator, Sonospray, 2D stamping, perovskite PV
+\item[\uncheckedbox] Optical Characterization and Laser Spectroscopy---ultrafast dynamics, 
+microRaman, PL lifetime, UV-VIS-NIR, fluorometry, PLE
+\item[\uncheckedbox] Electrical/Optoelectronic Characterization in 
+Controlled Environments---Semiconductor, R-T, AC impedance, PV and OLED efficiency
+\item[\uncheckedbox] Catalysis and Operando Spectroscopy: gas phase, electro- and photo-chemistry
+\end{myitemize}
+\rule{12cm}{1pt}\\
+%
+{\bf NANOMATERIALS THEORY INSTITUTE}
+\begin{myitemize}
+\item[\_\_\_] K cpu-hours NTI Computational Cluster, capacity computing
+
+\item[\_\_\_] K cpu-hours Facilitation of access to NERSC, high-performance
+
+\item[\_\_\_] K cpu-hours Facilitation of access to NCCS, leadership class
+
+\item[\_\_\_] days NTI staff support, experimental project
+
+\item[\_\_\_] days NTI staff support, theoretical project
+\end{myitemize}
+\rule{12cm}{1pt}\\
+{\bf NEUTRON SCATTERING \& X-RAY CAPABILITIES}
+\begin{myitemize}
+\item[\uncheckedbox] X-ray diffraction and small-angle scattering
+\item[\uncheckedbox] Neutron Scattering---attach Neutron Scattering appx.
+\end{myitemize}
+}}
+%
+%
+%\fbox{\parbox[t]{0.2cm}{\hfill}}
+%
+%
+\fbox{\parbox[t]{\textwidth-12.3cm}{%
+{\bf SCANNING PROBE MICROSCOPY}
+\begin{myitemize}
+\item[\uncheckedbox] Advanced SPM: air, liquid, glove box (cAFM, PFM, ESM, MFM)
+\item[\uncheckedbox] AFM: topography
+\item[\uncheckedbox] Laser MBE with in situ RHEED, AFM/STM, electron
+spectroscopies
+\item[\uncheckedbox] Magnetic Property Measurement System
+\item[\uncheckedbox] Ultrahigh Vacuum 4-probe STM
+\item[\uncheckedbox] Ultrahigh Vacuum AFM
+\item[\uncheckedbox] Ultrahigh Vacuum STM/STS
+\end{myitemize}
+\rule{8cm}{1pt}\\
+{\bf NANOFABRICATION RESEARCH LABORATORY}
+\begin{myitemize}
+\item[\uncheckedbox] Process Design for Cleanroom Processes
+\item[\uncheckedbox] E-beam Lithography
+\item[\uncheckedbox] Dual-beam SEM/FIB
+\item[\uncheckedbox] 3D Direct-Write Fabrication
+\item[\uncheckedbox] FirstNano Rapid Thermal Processing Tool
+\item[\uncheckedbox]Plasma Atomic Layer Deposition
+\item[\uncheckedbox] Helium-Ion Milling (Zeiss Orion NanoFab)
+\item[\uncheckedbox] Advanced SEM (Zeiss Merlin)
+\item[\uncheckedbox] General Cleanroom Use (see website for details)
+\end{myitemize}
+BIO-INSPIRED NANOMATERIALS
+\begin{myitemize}
+\item[\uncheckedbox] Multimodality live-cell imaging
+\item[\uncheckedbox] DC-PECVD synthesis of VACNFs or CNSs 
+\end{myitemize}
+\rule{8cm}{1pt}\\
+{\bf ELECTRON MICROSCOPY \& ATOM PROBE TOMOGRAPHY}
+\begin{myitemize}
+\item[\uncheckedbox] Soft Matter TEM (Zeiss Libra)
+\item[\uncheckedbox] High-resolution TEM/STEM with EELS \& EDS (Hitachi HF3300)
+\item[\uncheckedbox] Low-voltage (60-100kV) aberration-corrected STEM/EELS (Nion U100)
+\item[\uncheckedbox] 300kV aberration-corrected STEM/EELS(FEI Titan S)
+\item[\uncheckedbox] TEM Specimen Preparation (FIB, microtome, ion   mill)
+\item[\uncheckedbox] Atom Probe Tomography (LEAP 4000X HR)
+\item[\uncheckedbox] FIB to prepare APT needles (FEI Nova 200)
+\item[\uncheckedbox] Helium-Ion Microscopy (Zeiss Orion NanoFab)
+\end{myitemize}
+}}
+\noindent%
+\fbox{\parbox[t]{\textwidth}{%
+{{\bf OTHER FACILITIES}---If you have identified other facilities not listed above 
+that you want to use, \emph{you must first contact a CNMS Staff Member to discuss
+availability} then provide their name and facility description below. CNMS cannot pay any
+costs associated with use of other ORNL facilities.}\vspace{0.1cm}\\
+{CNMS Staff Member(s): \hspace{2cm} Facility Description: \hspace{1cm}}
+}}
+%
+%
+% PAGE 3
+\newpage
+\noindent%
+\fbox{\parbox[t]{\textwidth}{%
+\begin{center}{\bf Scheduling Considerations}\end{center}
+{ Estimate the total number of days that will be needed at the CNMS: \hspace{1cm} (Required)}\\
+{ Propose a specific date to begin work at CNMS: \hspace{1cm} (Optional)}
+}}
+%
+%
+\fbox{\parbox[t]{\textwidth}{%
+\begin{center}{\bf Samples and Identification of Hazards}\end{center}
+Research samples used in this project will be:\vspace{0.1cm}\\[3pt]
+\hspace*{0.5cm}\uncheckedbox Synthesized at CNMS\\[3pt]
+\hspace*{0.5cm}\uncheckedbox Supplied by user with additional processing at CNMS\\[3pt]
+\hspace*{0.5cm}\uncheckedbox Wholly supplied by user, only characterized at CNMS\\[3pt]
+\hspace*{0.5cm}\uncheckedbox I have special sample handling requirements (e.g., air- or light-sensitive materials, etc.) (specify):\\
+
+%
+%
+\noindent{Provide a brief description of ALL materials (samples, supplies, and equipment) that you plan to bring into the CNMS.
+Materials and equipment that are not specifically listed here will not be allowed into CNMS.
+Include common name and chemical formula if applicable.  Check any boxes below that apply to these materials.}\\
+
+% leave no white lines here
+%
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}|p{4cm}lll|}\hline
+\multicolumn{4}{|l|}{}\\[-6pt]
+\uncheckedbox No major safety issues & \uncheckedbox Corrosive Material & \uncheckedbox Explosive Material  & \uncheckedbox Electrical/Electronic Equipment\\[3pt]
+\uncheckedbox Flammable Material & \uncheckedbox Radioactive Material &  \uncheckedbox Lasers& \uncheckedbox Other: (\emph{specify})\\[3pt]
+\uncheckedbox Carcinogenic & \uncheckedbox Biohazardous &  \uncheckedbox  Cryogenic hazard &\\[3pt]
+\uncheckedbox\parbox[t]{5cm}{Human subjects or\\human bodily materials} & \uncheckedbox Toxic Material &  \uncheckedbox  High Pressure &\\[3pt]\hline
+\end{tabular*}
+}}
+%
+% PAGE 3:
+\newpage
+\noindent
+\fbox{\parbox[t]{\textwidth}{%
+User Access Mode:\hspace{2cm} \uncheckedbox General User \hspace{2cm}\uncheckedbox Partner User (for development of specialized facilities or methods)\\
+(For definitions of User Access Modes see \url{http://cnms.ornl.gov/user/policies.shtm\#modes})}}\\
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf State in your own words the reasons that led you to propose performing this research at the CNMS
+ as opposed to some other facility, i.e., why are CNMS facilities or expertise needed? (limit to 2 lines).}}}\\
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf Have you contacted a CNMS staff member to discuss the feasibility of your project?} \hspace{2cm}	\uncheckedbox Yes \hspace{2cm} \uncheckedbox No  \\
+Contact Name(s): }}\\
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf Suggestions for capabilities that CNMS may consider acquiring that would benefit your research:}\vspace{0.2cm}\\}}\\
+%
+\begin{tabular*}{\textBigWidth}{@{\extracolsep{\fill}}|p{6cm}p{6cm}|p{5cm}|}\hline
+\multicolumn{3}{|c|}{}\\[-6pt]
+\multicolumn{3}{|c|}{{\bf Please Categorize Your Proposal  (Required for DOE reporting purposes)}}\\[3pt]\hline
+\multicolumn{2}{|c|}{{\bf Subject of this Project}} &
+{\bf Sources of Support}\\
+\multicolumn{2}{|c|}{{\bf (check all that apply)}} & {\bf (check all that apply)}
+\\\hline
+\begin{itemize}
+\item[\uncheckedbox] Materials Sciences (including condensed matter physics, materials chemistry)
+\item[\uncheckedbox] Physics (excluding condensed matter physics)
+\item[\uncheckedbox] Chemistry (excluding materials chemistry)
+\item[\uncheckedbox] Polymers
+\item[\uncheckedbox] Medical Applications
+\item[\uncheckedbox] Biological, Life Sciences (excluding medical applications)
+\end{itemize}
+&
+\begin{itemize}
+\item[\uncheckedbox] Earth Sciences
+\item[\uncheckedbox] Environmental Sciences
+\item[\uncheckedbox] Optics
+\item[\uncheckedbox] Engineering
+\item[\uncheckedbox] Instrumentation or technique development related to  user facilities
+\item[\uncheckedbox] Purchase of specialty services or materials
+\item[\uncheckedbox] Other: specify
+\item[\uncheckedbox] DOE, Basic Energy Sciences
+\item[\uncheckedbox] DOE, Biological \& Environmental Res.
+\item[\uncheckedbox] DOE, Other:  specify
+\end{itemize}
+&
+\begin{itemize}
+\item[\uncheckedbox] DOD: specify
+\item[\uncheckedbox] NSF
+\item[\uncheckedbox] NIH
+\item[\uncheckedbox] NASA
+\item[\uncheckedbox] USDA
+\item[\uncheckedbox] Other US Govt: specify
+\item[\uncheckedbox] Industry
+\item[\uncheckedbox] Foreign: specify
+\item[\uncheckedbox] Other: University of Tennessee at Knoxville
+\end{itemize}
+\\\hline
+\end{tabular*}
+%
+\fbox{\parbox[t]{\textwidth}{%
+\begin{center}{\bf Status of Funding for Proposed Research}\end{center}
+Occasionally, an approved CNMS user may not be able to utilize their full time allocation because they do not have sufficient funding in place.
+The information requested below will be used only to help us anticipate how much potential unclaimed time may become
+available to support additional user projects. It will not affect the outcome of the review process.  Please check the box that applies.\\
+\uncheckedbox Proposal team members have research grant(s) already in place that is/are sufficient to support their participation in this project.\\
+\uncheckedbox We have submitted proposal(s) to the following agencies to request funding that will be needed to support our participation: \\
+\hspace*{0.5cm}Funding agency\_\_\_\_\_\_\_\_\_\_\_\_\_; Expected decision date: \_\_\_\_\_\_\_\_\_\_\_\_\_
+}}
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf SUGGESTED REVIEWERS} (Optional) - You may suggest up to 5 of the most suitable reviewers from the current CNMS Proposal Review Committee
+listed at \url{http://www.cnms.ornl.gov/about_cnms/PRC.shtm}. In addition, you may also list up to 3 individuals who are not on the CNMS Review Committee.
+Do not include anyone affiliated with ORNL, CNMS, or your home institution, recent collaborators, or anyone else who may have
+``Potentially Disqualifying Conflicts of Interest" as defined by the {\it National Science Foundation},
+(see \url{http://www.nsf.gov/pubs/gpg/nsf04_23/appb.jsp}).\\
+{\bf From the CNMS Proposal Review Committee:}\\
+\begin{tabular}{lll}
+1. &  2.  & 3.  \\
+4.  & 5.\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\end{tabular}
+
+{\bf Optional- Additional reviewers NOT from the CNMS Review Committee (provide institutional affiliation):}
+\begin{tabular}{ll}
+6. Name:\_\_\_\_\_\_\_\_\_\_\_\_\_ & Institution \_\_\_\_\_\_\_\_\_\_\_\_\_\\
+7. Name:\_\_\_\_\_\_\_\_\_\_\_\_\_ & Institution \_\_\_\_\_\_\_\_\_\_\_\_\_  \\
+8. Name: \_\_\_\_\_\_\_\_\_\_\_\_\_ & Institution \_\_\_\_\_\_\_\_\_\_\_\_\_  \\
+\end{tabular}
+}}
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf Optional- Please EXCLUDE the following members of the CNMS Proposal Review Committee due to a potential conflict of interest: \_\_\_\_\_\_\_\_\_\_\_\_\_ }
+}}
+%
+\fbox{\parbox[t]{\textwidth}{%
+{\bf PRINCIPAL INVESTIGATOR'S AGREEMENT:}
+\textinred{\it Signature is not required if the proposal is transmitted by email from the PI.}\\
+By signing or by electronic submission, I certify that the information provided herein is correct to the best of my knowledge and
+that I intend to publish the results of this research. I also agree to (1) acknowledge the CNMS in all publications resulting from
+the use of the facility; (2) send a timely draft of all manuscripts to all ORNL co-authors for review prior to submission;
+and (3) send a copy of resulting publications to the CNMS User Coordinator.\\
+
+{\bf Signature of PI:} \hspace{5cm} {\bf Printed Name:}  \hspace{1.5cm}	{\bf Date: }
+}}
+
+%PAGE 4
+\pagebreak
+
+\makebox[\textwidth]{}
+\begin{center}
+{\bf DESCRIPTION OF PROPOSED RESEARCH}
+\end{center}
+
+{\it The description must be limited to a maximum of 2 pages, including text and figures.
+PIs are encouraged to consult the CNMS Proposal Evaluation Guidelines used by reviewers at}\\
+\url{http://www.cnms.ornl.gov/about_cnms/eval_guidelines.shtm.}\\
+\textinred{Note:  If you plan to use figures, it is best to copy/paste pre-formatted figures with text into this form.}\\
+
+\noindent{\bf ADDRESS EACH OF THE FOLLOWING QUESTIONS IN A SEPARATE SECTION.}\\
+A maximum of 2 pages can be used to respond to the 6 numbered questions below; Proposers may determine the amount of space used for each question.
+
+\noindent1){\bf What is/are the main scientific question(s) that you plan to address?}\\
+
+TBW.  \\
+\rule{\textwidth}{1pt}
+
+\noindent2) {\bf Outline the overall technical approach that you plan to use to address the above questions.
+This section should provide the context for research tasks described below in sections (3), home institution activities, and (4), CNMS research. }\\
+
+TBW. \\
+\rule{\textwidth}{1pt}
+
+\noindent3) {\bf What research tasks will be carried out at the users' home institution or elsewhere outside of the CNMS?
+Include any preliminary syntheses, measurements, or tests that have been/will be performed in preparation for the proposed research at the CNMS. }\\
+
+TBW.
+
+
+\rule{\textwidth}{1pt}
+
+\noindent4) {\bf Describe very clearly and specifically the research tasks to be carried out at the CNMS and the expected outcomes from the CNMS tasks.
+Include any technical milestones that must be met for the research to be successful.} \\
+
+TBW. \\
+\rule{\textwidth}{1pt}
+
+\noindent5) {\bf Provide an overall timeline for the CNMS tasks and describe how each facility/instrument that is checked on p. 2 will be used,
+including estimates of the number/quantities of samples, instrument time, CPU time, etc.} \\
+
+TBW. \\
+\rule{\textwidth}{1pt}
+
+\noindent6) {\bf What is your team's specific experience and expertise relevant to this research project? }\\
+
+TBW.\\
+\rule{\textwidth}{1pt}
+
+\noindent LITERATURE CITED ABOVE---if any (not included in the 2 page limit)\\
+\noindent{\bf References}\\ \\
+1. [Test, 2099] A. Test {\it et al.}, {\it Some Physics Journal} {\bf 999}, 1-99 (2099).\\
+
+\noindent\rule{\textwidth}{1pt}
+
+\noindent{\bf \textinred{New} PUBLICATION RECORD: Have you had any previous CNMS project(s)? YES\uncheckedbox\hspace{0.2cm}
+NO\uncheckedbox (\textinred{response required})\\
+If yes, list publications resulting from your past project(s)----maximum of 10:\\}
+(enter text here)\\
+
+\noindent\rule{\textwidth}{1pt}
+
+\noindent{\bf \it The section below is for \textinred{PARTNER USER} proposals only} (half page or less - not included in the 2 page limit)\\
+\rule{\textwidth}{1pt}
+
+\noindent{\bf PARTNER USER proposals only: What unique, new capabilities will be developed at the CNMS as a result of this approach?
+How will these contribute to future research by other CNMS users?}
+ \\
+  \rule{\textwidth}{1pt}
+\end{small}
+\end{document}
+
