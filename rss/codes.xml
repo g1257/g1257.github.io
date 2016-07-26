@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 	<title>DMRG++ and Related Codes</title>
-	<link>https://web.ornl.gov/~gz1/rss/codes.rss</link>
-	<description>RSS feed for computer codes at https://web.ornl.gov/~gz1/hashes.html</description>
+	<link>https://g1257.github.io/rss/codes.rss</link>
+	<description>RSS feed for computer codes at https://g1257.github.io/hashes.html</description>
 
-<atom:link href="https://web.ornl.gov/~gz1/rss/codes.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://g1257.github.io/rss/codes.xml" rel="self" type="application/rss+xml" />
 
 <item>
 <title>DMRG++ Parallel Compilation</title>
@@ -28,7 +28,7 @@ hardware.
 IMPORTANT: After each git pull please run perl configure.pl in both
 PsimagLite/lib and dmrgpp/src
 </description>
-<guid isPermaLink="false">https://web.ornl.gov/~gz1/rss/codesEntry#3.html</guid>
+<guid isPermaLink="false">https://g1257.github.io/rss/codesEntry#3.html</guid>
 </item>
 
 <item>
@@ -40,19 +40,20 @@ PsimagLite/lib and dmrgpp/src
 
 <item>
 <title>DMRG++ Manual updated</title>
-<description>See https://web.ornl.gov/~gz1/dmrgPlusPlus/manual.html</description>
-<guid isPermaLink="false">https://web.ornl.gov/~gz1/rss/codesEntry#2.html</guid>
+<pubDate>Tue, 27 Oct 2015 11:09:35 EDT</pubDate>
+<description>See https://g1257.github.io/dmrgPlusPlus/manual.html</description>
+<guid isPermaLink="false">https://g1257.github.io/rss/codesEntry#2.html</guid>
 </item>
 
 	<item>
 		<title>timeEvolution1.pl script deprecated</title>
+<pubDate>Tue, 27 Oct 2015 11:09:35 EDT</pubDate>
 		<description>
 Please use ./tooboxdmrg -a grep -E label instead of perl timeEvolution.pl label 0 because output
 is now automatically redirected and put in a tar file.
 </description>
-		<guid isPermaLink="false">https://web.ornl.gov/~gz1/rss/codesEntry#1.html</guid>
+		<guid isPermaLink="false">https://g1257.github.io/rss/codesEntry#1.html</guid>
 	</item>
 
 </channel>
 </rss>
-
