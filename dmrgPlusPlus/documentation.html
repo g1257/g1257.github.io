@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.1.25" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="content-type" content=
+"text/html; charset=utf-8" />
+<title>Documentation</title>
+<meta name="keywords" content="condensed matter theory" />
+<meta name="description" content="condensed matter theory" />
+<link href="styles3.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title=
+"Gonzalo Alvarez Website RSS Feed" href=
+"https://g1257.github.io/website.xml" />
+<link rel="alternate" type="application/rss+xml" title=
+"Gonzalo Alvarez Computer Codes RSS Feed" href=
+"https://g1257.github.io/rss/codes.xml" />
+</head>
+<body>
+<div id="all1">
+<div id="header"></div>
+<div id="nav1">
+<ul>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/index.html">Home</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/download.html">Download</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/documentation.html" id=
+"activeItem" name="activeItem">Documentation</a>
+<ul>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/manual.html">Manual</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/performance.html">Performance</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/faq.html">FAQ</a></li>
+</ul>
+</li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/features.html">Features</a>
+<ul>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/showcase.html">Showcase</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/papers.html">Papers</a></li>
+</ul>
+</li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/news.html">News</a>
+<ul>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/roadmap.html">Roadmap</a></li>
+</ul>
+</li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/contact.html">Contact</a>
+<ul>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/howToCite.html">HowToCite</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/feedback.html">Feedback</a></li>
+<li><a href=
+"https://g1257.github.io/dmrgPlusPlus/relatedCodes.html">Related_Codes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- nav1 -->
+<div id="leftcolumn"><a href="documentationNoPanel.html">[Hide This
+Panel]</a><br />
+<!-- feed ad starts -->
+<h2><a href="https://g1257.github.io/rss/"><img alt="RSS Feed"
+style="vertical-align:middle" src=
+"https://g1257.github.io/images/Feed-icon.svg" width="32" border=
+"0" /></a> News</h2>
+<!-- feed ad ends   -->
+<!-- news item begin -->
+<span class="calleft">27</span> <span class="calright"><a href=
+"https://sites.google.com/site/niravdpatel37/links">Tuesday,
+October 27, 2015</a> DMRG++ Tutorial by N. Patel</span>
+<div class="endofp"><a href=
+"https://sites.google.com/site/niravdpatel37/links">&gt; Read
+more</a></div>
+<br />
+<br />
+<!-- news item end -->
+ <!-- news item begin -->
+ <span class="calleft">4</span> <span class="calright"><a href=
+"https://web.ornl.gov/~gz1/dmrgPlusPlus/manual.html">Thursday,
+December 4, 2014</a> PDF manual is now available.</span>
+<div class="endofp"><a href=
+"https://web.ornl.gov/~gz1/dmrgPlusPlus/manual.html">&gt; Read
+more</a></div>
+<br />
+<br />
+<!-- news item end -->
+<h2>Please Cite This Work</h2>
+<p>You are welcomed to use DMRG++ and publish data obtained with
+it. If you do, please cite this work.</p>
+<div class="endofp"><a href="howToCite.html">Here's How To Cite
+DMRG++</a></div>
+</div>
+<!-- left column -->
+<div id="contents"><br />
+<br />
+<div class="announce">
+<h2>DMRG 101 Tutorial</h2>
+<p>Title: Density Matrix Renormalization Group 101: Introduction to
+Theory and Practice<br />
+When: Fri, Aug 12, 2016<br />
+Where: Oak Ridge National Laboratory, Oak Ridge, TN, USA<br />
+There is no cost but <a href=
+"https://public.ornl.gov/conferences/cnms2016/registration/">registration</a>
+is required. Here is the <a href=
+"https://public.ornl.gov/conferences/cnms2016/workshop4/">official
+announcement and agenda</a>.</p>
+<div class="endofp"><a href=
+"https://public.ornl.gov/conferences/cnms2016/workshop4/">&gt; Read
+more</a></div>
+</div>
+<h2>Compiling and running</h2>
+<p>After downloading you can compile DMRG++ code with:</p>
+<pre class="terminal1">
+<span class="code1">$ cd PsimagLite/lib</span>
+<span class="code1">$ perl configure.pl</span>
+<span class="comment1"> (You may now edit Config.make)</span>
+<span class="code1">$ make</span>
+<span class="code1">$ cd ../../dmrgpp/src</span>
+<span class="code1">$ perl configure.pl</span>
+<span class="comment1"> (You may now edit Config.make)</span>
+<span class="code1">$ make</span>
+</pre>
+<p>and run it with</p>
+<pre class="terminal1">
+<span class="code1">$ cp ../TestSuite/inputs/input2.inp .</span>
+<span class=
+"code1">$ ./dmrg -f ../TestSuite/inputs/input2.inp </span>
+</pre>
+<p>After it finishes, data will be saved in <tt>data2.txt</tt>. You
+can run</p>
+<pre class="terminal1">
+<span class="code1">grep Energy data2.txt</span>
+</pre>
+<p>to obtain the energies for all steps of the algorithm.</p>
+<div class="final"></div>
+<h2>Obtaining Static Observables</h2>
+<p>Observables can be obtained <i>post-processing</i> by compiling
+and running the observer code:</p>
+<pre class="terminal1">
+<span class="code1">$ make observe</span>
+<span class="code1">$ ./observe -f input2.inp cc</span>
+</pre>
+<p>The output will be a <i>n</i> times <i>n/2</i> matrix for
+&lt;c<sup>+</sup><sub>i</sub> c<sub>j</sub>&gt; in i, and j. Other
+possibilities include <tt>nn</tt> for &lt;n<sub>i</sub>
+n<sub>j</sub>&gt; correlations, and <tt>szsz</tt> for spin-z
+correlations.</p>
+<div class="final"></div>
+<h2>Where to find more documentation</h2>
+<p>There's plenty of documentation for DMRG++.</p>
+<ul class="normallist">
+<li><a href=
+"https://sites.google.com/site/niravdpatel37/links">DMRG++ Tutorial
+by N. Patel</a></li>
+<li>The introducing paper <a href=
+"http://arxiv.org/abs/0902.3185">arXiv:0902.3185</a> published in
+<a href="http://dx.doi.org/10.1016/j.cpc.2009.02.016">Computer
+Physics Communications 180 (2009) 1572-1578</a>. Some things are
+out-of-date but the overall structure and philosophy of the code is
+the same.</li>
+<li>The <a href="manual.html">DMRG++ manual</a>. This is incomplete
+but it will be updated as there's interest.</li>
+<li>The implmentation of the SU(2) symmetry in DMRG++ is described
+in <a href=
+"http://arxiv.org/abs/1003.1919">arXiv:1003.1919</a></li>
+<li>This March Meeting 2010 <a href="mm10posted.pdf">talk</a> has a
+focus on SU(2) symmetries but describes other parts of the
+implementation as well.</li>
+<li>Further info is given on parts of this <a href=
+"alb10.pdf">talk</a> I gave at Sandia National Laboratories on Oct.
+2010.</li>
+<li>Files that have literate programming generated documentation
+are <a href="doc/">here</a>.</li>
+<li>There is also <a href="http://arxiv.org/abs/1103.5391">this
+paper</a> on time evolution using DMRG++.</li>
+</ul>
+<div class="final"></div>
+</div>
+<!-- contents ends -->
+<div id="footer">
+<p><a href="https://g1257.github.io/">G. Alvarez</a> © 2016.
+<a href=
+"https://www.ornl.gov/ornl/contact-us/security--privacy-notice">Disclaimers</a>
+| <a href=
+"https://validator.w3.org/check?uri=https://g1257.github.io/dmrgPlusPlus/documentation.html"
+title="Valid XHTML 1.0 Strict">XHTML</a> | <a href=
+"https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/dmrgPlusPlus/documentation.html"
+title="This page validates as CSS">CSS</a> | Modified: Jul 27,
+2016</p>
+<img src="https://web.ornl.gov/cgi-bin/cgiwrap/gz1/http2.pl" alt=""
+width="1" height="1" /></div>
+</div>
+<!-- all1 -->
+</body>
+</html>
