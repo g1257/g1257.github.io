@@ -48,7 +48,7 @@
 <li><a href=
 "https://g1257.github.io/hashesNoPanel.html">CodesHashes</a></li>
 <li><a href="https://g1257.github.io/keysNoPanel.html" id=
-"activeItem" name="activeItem">Keys</a></li>
+"activeItem">Keys</a></li>
 <li><a href=
 "https://g1257.github.io/rss/indexNoPanel.html">RSS_Feed</a></li>
 </ul>
@@ -142,8 +142,7 @@ points.
 <h2>Step 2: Download my public keys</h2>
 <p>Download the <tt>keyID.txt</tt> files linked in the <a href=
 "#tableofkeys">table below</a> and listed as valid.</p>
-<h2><a name="import" id="import">Step3: Import my public
-keys</a></h2>
+<h2><a id="import">Step3: Import my public keys</a></h2>
 <pre>
 gpg --import keyID.txt
 </pre>
@@ -174,8 +173,7 @@ other than my master key are signed by my master key.</p>
 <pre>
 gpg --check-sigs
 </pre>
-<h2><a name="step6" id="step6">Step 6: Using keys to verify my
-commits</a></h2>
+<h2><a id="step6">Step 6: Using keys to verify my commits</a></h2>
 <ul>
 <li>Make sure keys are still valid. See table below.</li>
 <li>Re-import expired but valid keys if needed.</li>
@@ -185,8 +183,7 @@ of just <tt>git pull</tt>.</li>
 <li>To verify a given commit <tt>git log --show-signature
 -1</tt></li>
 </ul>
-<h2><a name="tableofkeys" id="tableofkeys">Appendix A: Table of
-keys</a></h2>
+<h2><a id="tableofkeys">Appendix A: Table of keys</a></h2>
 <center>
 <table summary="Table of Keys" border="1" cellspacing="0"
 cellpadding="10">
