@@ -90,12 +90,12 @@ a:visited {
 #header {
 	display: block;
 	height: 50px;
-	background: #0074d9;
+	background: #0000cc;
 }
 
 #nav1 {
 	margin: 0px auto; 
-	background: #0074d9;
+	background: #0000aa;
 	text-align: center;
 }
 
@@ -109,7 +109,7 @@ a:visited {
 
 
 #nav1 ul {
-	background: #0074d9;
+	background: #0000aa;
 	padding: 0 20px;
 	list-style: none;
 	position: relative;
@@ -123,7 +123,7 @@ a:visited {
 		float: left;
 	}
 		#nav1 ul li:hover {
-			background: #69a5ff;
+			background: #0000cc;
 		}
 			#nav1 ul li:hover a {
 				color: #fff;
@@ -138,21 +138,21 @@ a:visited {
 		}
 		
 	#nav1 ul ul {
-		background: #69a5ff; padding: 0;
+		background: #0000ee; padding: 0;
 		position: absolute; top: 100%;
 		text-align: left;
 	}
 		#nav1 ul ul li {
 			float: none; 
-			border-top: 1px solid #9ec5ff;
-			border-bottom: 1px solid #cde1ff; position: relative;
+			border-top: 1px solid #000000;
+			border-bottom: 1px solid #eeeeee; position: relative;
 		}
 			#nav1 ul ul li a {
 				padding: 15px 40px;
 				color: #fff;
 			}	
 				nav ul ul li a:hover {
-					background: #69a5ff;
+					background: #0000ee;
 				}
 		
 	#nav1 ul ul ul {
@@ -160,7 +160,7 @@ a:visited {
 	}
 
 #activeItem {
-	background: #69a5ff;
+	background: #0000ee;
 }
 
 #leftcolumn {
@@ -204,7 +204,7 @@ a:visited {
 }
 
 #footer a:visited {
-        color: #dddddd;
+        color: #000000;
 	text-decoration: underline;
 }
 
