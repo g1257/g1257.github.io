@@ -110,7 +110,7 @@ a:visited {
 
 #nav1 ul {
 	background: #0000aa;
-	padding: 0 20px;
+	padding: 0 1em;
 	list-style: none;
 	position: relative;
 	display: inline-table;
@@ -130,11 +130,11 @@ a:visited {
 			}
 		
 		#nav1 ul li a {
-			display: block; padding: 25px 40px;
+			display: block; padding: 1em 1em;
 			color: #dddddd;	
 			text-decoration: none;
-			font-size: 24px;
-			line-height: 28px;
+			font-size: 18px;
+			line-height: 22px;
 		}
 		
 	#nav1 ul ul {
@@ -148,7 +148,7 @@ a:visited {
 			border-bottom: 1px solid #eeeeee; position: relative;
 		}
 			#nav1 ul ul li a {
-				padding: 15px 40px;
+				padding: 1em 1em;
 				color: #fff;
 			}	
 				nav ul ul li a:hover {
@@ -164,25 +164,24 @@ a:visited {
 }
 
 #leftcolumn {
-	width: 20%;
+	min-width: 10%;
 	float: left;
-	padding-left: 20px;
-	padding-right: 20px;
-	min-width: 200px;
+	padding-left: 1em;
+	padding-right: 1em;
 	background: #fafafa;
 }
 
 #contents {
 	margin: 0 auto;
-	padding-left: 40px;
-	padding-bottom: 50px;
+	padding-left: 2em;
+	padding-bottom: 2em;
 	width: 50%;
 }
 
 #contentsNoPanel {
 	margin: 0 auto;
-	padding-left: 40px;
-	padding-bottom: 50px;
+	padding-left: 2em;
+	padding-bottom: 2em;
 	width: 50%;
 }
 
@@ -211,15 +210,15 @@ a:visited {
 
 h2 {
 	font-weight: 600;
-	padding-top: 40px;
-	padding-bottom: 10px;
+	padding-top: 2em;
+	padding-bottom: 1em;
 	color: #001f3f;
 }
 
 h1 {
 	font-weight: 700;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 2em;
+	padding-bottom: 2em;
 	color: #001f3f;
 	text-align: center;
 }
@@ -242,7 +241,6 @@ p {
 .announce {
 	display: block;
 	background: #f6d000; 
-/* #FFEC7F;*/
 	padding: 2px 10px 10px 10px;
 	border: 2px solid #0074D9;
 }
