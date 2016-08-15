@@ -7,7 +7,31 @@
 
 <atom:link href="https://g1257.github.io/rss/codes.xml" rel="self" type="application/rss+xml" />
 
- <item>
+<item>
+	<title>DMRG++ Tutorial Materials</title>
+<pubDate>Mon, 15 Aug 2016 13:00:00 EDT</pubDate>
+<description>Slides and inputs for the DMRG 101 Introduction
+to Theory and Practice tutorial have been posted to the below URL.
+Thanks to all who attended!
+</description>
+<guid>https://g1257.github.io/dmrg101</guid>
+</item>
+
+<item>
+	<title>Mailing list for DMRG++ and Auxiliary Codes</title>
+	<pubDate>Thu, 4 Aug 2016 13:00:00 EDT</pubDate>
+	<description>To view the messages sent to the list
+please visit the link below and
+click on dmrgpp Archives, and from there click on the Thread for the month
+you are interested in.
+
+To post to the list, please write an email to dmrgpp (at) ornl.gov
+Message to the list are worldwide viewable.
+</description>
+	<guid>https://elist.ornl.gov/mailman/listinfo/dmrgpp</guid>
+</item>
+
+<item>
                 <title>DMRG 101 Tutorial</title>
                 <pubDate>Thu, 28 Jul 2016 11:00:00 EDT</pubDate>
                 <description><![CDATA[Title: Density Matrix Renormalization Group 101: Introduction to
