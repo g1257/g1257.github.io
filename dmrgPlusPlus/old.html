@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://www.ornl.gov/~gz1/dmrgPlusPlus/" -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title> DMRG++: Software Project</title>
+</head><body vlink="#0000ff">
+
+<br>
+<br>
+<center>
+<img src="../images/dmrgV2Logo.png" alt="DMRG LOGO" border="0"><br>
+<i>"A generic DMRG Implementation in C++"</i><br><br>
+<table width="400">
+<tbody><tr>
+<td align="justify">
+<i>
+<b>Project Mission</b>: DMRG++ is a free and open source implementation of the DMRG algorithm. It emphasizes generic programming
+using C++ templates, friendly user-interface, and as few software dependencies as possible.
+DMRG++ tries to make writing new models and geometries easy, fast and bug-free by
+using a generic DMRG engine.
+</i>
+</td>
+</tr>
+<tr><td align="center">(<a href="http://www.itp.uni-hannover.de/%7Ejeckelm/dmrg/">What's the DMRG?</a>)</td>
+</tr>
+</tbody></table>
+
+</center>
+<br><br>
+<h2><img src="../images/news.png" alt="News" longdesc="http://commons.wikimedia.org/wiki/File:News_square.svg" width="80" align="middle"></h2>
+<ul>
+	<li><b>Mar. 29, 2011:</b>: Paper on time evolution posted to cond-mat, see documentation below.
+	Explanatory notes on how to reproduce the figures of this paper using DMRG++ will be posted on this page shortly.
+	</li>
+	<li><b>Mar. 22, 2011:</b>: The CNMS has an <a href="http://cnms.ornl.gov/user/call_proposals.shtm">open call</a>
+	for proposals. Feel free to submit a proposal if you want new models and/or geometries, or other
+       work related to DMRG++. Also,
+       feel free to use the <a href="http://www.ornl.gov/%7Egz1/CnmsUserFormTex/">alternative form</a> in LaTeX, if you prefer.
+       Deadline is May 4, 2011.
+       </li> 
+	<li><b>Jan. 12, 2011:</b>
+	<del>As of <a href="https://github.com/g1257/dmrgpp/tree/c433d3d1f519f2298e5962d47ef23dc102a1e9bc">today's version</a>, 
+	DMRG++ depends on the the GNU Scientific Library or GSL. 
+	This is found in <a href="http://www.gnu.org/software/gsl/">http://www.gnu.org/software/gsl/</a>. 
+	However, you might not need to download it, since many Linux distributions have it in their official repositories. 
+	(e.g. in SUSE the GSL is found under the names of gsl and gsl-devel, you need both). 
+	This is marked semi-optional, since you can work without the GSL, please see <i>Removing GSL Dependencies</i>, 
+	in <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/#subsec:gsl">section 2.3 of the manual</a> for more info.</del>
+	<b>The GSL is no longer required in the default configuration.</b></li> 
+	<li><b>Dec. 15, 2010:</b>: <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/#SECTION000133000000000000000">Manual</a> updated: checkpoint section added, make sure you have at least 
+	<a href="https://github.com/g1257/dmrgpp/commit/1c8fd4ffb0b8db62d44ae9f90aafcec3600b5172">today's version</a>. 
+	Note also that you can generate a manual.pdf, by using the source under <tt>doc/manual.tex</tt> </li>
+	<li><b>Dec. 13, 2010:</b> A page with <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/comparisons/issues.html">issues</a> has been posted.
+		Contributions are appreciated. Thanks. </li>
+	<li><b>Dec. 8, 2010:</b> DMRG++ now needs <a href="https://github.com/g1257/PsimagLite">PsimagLite</a> as a dependency.
+	<font color="#00bb00">See <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/#SECTION00030000000000000000">section 2 of the manual</a> 
+		for more info.</font></li>
+	<li><b>Dec. 8, 2010:</b> A few <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/comparisons/">comparisons</a> of how well DMRG++ can compute observables.
+	Note: CPU times listed there are outdated and input files are also outdated.</li>
+	<li><b>Nov 1, 2010:</b>
+	<ul>
+		<li>Posted talk I gave at Sandia National Laboratories under documentation below</li>
+		<li>
+<b>DMRG++ to use Literate Programming: </b> 
+	<a href="http://www.literateprogramming.com/">Literate programming</a> will be used from now on.
+	Instead of documenting the code, we will add code to the documentation. This will enable the
+	creation of a story instead of having scattered explanations here and there. There are already samples
+	under <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/doc/">doc/</a> in this website. The git repository already includes certain 
+	<tt>.w</tt> files under src/Engine. </li>
+</ul></li>
+<li><b>News for August 26, 2010</b>
+<ul>
+<li>A new testsuite is available with the latest revision ( 276172be49d4193899ec ). Thanks to Ed. P. for contributing it!
+The testsuite's manual is under TestSuite/testsuite.8 (do man -l testsuite.8 or less testsuite.8 to see it)</li>
+<li>configure.pl no longer produces an input file. Please use a sample input file from inside
+the TestSuite (under TestSuite/inputs/). An input.pl script to write input files is in the works.</li>
+<li>Input file format has changed and so the manual is no longer up-to-date. Sorry to make
+this highly visible change, but it was unavoidable. Again please see TestSuite/inputs for examples of inputs.
+Also TestSuite/inputs/descriptions.txt for a description of each test. Input format will be moving to
+<a href="http://json.org/">JSON</a> format in the (unforseable for now :-)) future.</li>
+<li>One clarification about the manual: When updates are posted they will be announced in this section.</li>
+</ul>
+</li>
+<li>June 29, 2010: <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/">Manual</a> updated. See "Static Observables" section
+to learn how to compute static observables.</li>
+<li>June 29, 2010: You can follow DMRG++'s development (and its history) <a href="https://github.com/g1257/dmrgpp/commits/master">here</a></li>
+<li>June 2, 2010: Posted the talk I gave at the March Meeting, under Documentation below</li>
+<li>June 2, 2010: <b>DMRG++ Bleeding Edge Repository</b> has been posted (see below)</li>
+<li>
+<b>DMRG++ Bleeding Edge is Coming Up</b>
+<ul>
+<li>May 19, 2010: Preliminary Manual Posted <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/">here</a> (It's incomplete, though)</li>
+<li>May 18, 2010: Posted new schedule for <b>DMRG++ v2.2</b>, and Full <b>Manual</b>. Please see below under Schedule.</li>
+<li>May 18, 2010: Also: I plan to release the full code (bleeding edge),
+ and you'll be able to follow my coding through a git repo, with 
+frequent commits.
+Please stay tuned!
+</li>
+<li>May 18, 2010: Yes, I know there's not enough documentation yet. The 
+Full Manual will fix this problem. Depending on interest 
+ (feel free to drop me a line at gz1 at (@) ornl dot(.) gov if you want 
+to express interest), I'll add lengthier explanations to the 
+Full Manual. The release of the Bleeding Edge repository will also 
+depend on interest. </li>
+</ul> 
+</li>
+<li>
+<b>Documentation Update, Manual Delayed</b>
+<ul>
+<li>March 10, 2010: I posted in cond-mat the paper on SU(2) symmetry implementation, see below, under Documentation.</li>
+<li>March 11, 2010: The DMRG++ v2.0 manual is not ready yet, sorry, schedule has changed accordingly.</li>
+</ul>
+</li>
+<li><b><font color="#ff0000">DMRG++ v2.0 is out!</font></b> See "source code" below </li>
+</ul>
+<hr>
+<br>
+
+<h3>What's new in version 2.0?</h3>
+This List will be superseded by the DMRG++ v2.0 Manual when released.
+<ul>
+<li> Engine: SU(2) symmetry support</li>
+<li> Engine: full checkpointing support</li>
+<li> Engine: DiskStack or MemoryStack option</li>
+<li> Concurrency: Added pthreads support </li>
+<li> User Interface: Customizable finite sweeps</li>
+<li> New Model: FeBasedSc for Fe-based Superconductors</li>
+<li> New Geometry: GeometryLadderFeAs to go with FeBasedSc</li>
+<li> Tests: TestSuite added (under /TestSuite)</li>
+<li> Documentation: Detailed Manual for users and developers added (under /doc) <i>This is in progress</i></li>
+</ul>
+<hr>
+<br>
+<h3>Source code &lt;---contains v2.2 now!</h3>
+<ul>
+<li>Version 2.2 : 
+[<a href="https://github.com/g1257/dmrgpp/">github.com</a>] 
+On the previous link click on "Download source".
+</li>
+<li>
+Alternatively, if you have git installed then you can do 
+<pre>git clone https://github.com/g1257/dmrgpp.git
+</pre>
+and you'll get the git repo.
+</li>
+<li>SHA1 Hash of tag v2.2 7d1baeed77961879af49a76533153981729c6205 
+</li>
+<li>You can check this SHA1 hash from inside the dmrgpp directory with <tt>git rev-parse HEAD</tt></li>
+<li>Moreover, the v2.2 tag is signed. Ask for my public key if you want to verify it.</li>
+<li>
+Version 1 stable source code published by Computer Physics Communications:
+<a href="http://cpc.cs.qub.ac.uk/summaries/AEDJ_v1_0.html" target="_blank">[cpc.cs.qub.ac.uk]</a> (will open in new page or tab) </li>
+<li>Software LICENSE is in src/LICENSE and also <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/LICENSE">here</a></li>
+<li>
+<pre>*********************************************************
+DISCLAIMER
+
+THE SOFTWARE IS SUPPLIED BY THE COPYRIGHT HOLDERS AND
+CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER, CONTRIBUTORS, UNITED STATES GOVERNMENT,
+OR THE UNITED STATES DEPARTMENT OF ENERGY BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+NEITHER THE UNITED STATES GOVERNMENT, NOR THE UNITED
+STATES DEPARTMENT OF ENERGY, NOR THE COPYRIGHT OWNER, NOR
+ANY OF THEIR EMPLOYEES, REPRESENTS THAT THE USE OF ANY
+INFORMATION, DATA, APPARATUS, PRODUCT, OR PROCESS
+DISCLOSED WOULD NOT INFRINGE PRIVATELY OWNED RIGHTS.
+
+*********************************************************
+</pre>
+</li>
+</ul>
+<hr>
+<h3>Paper and Documentation</h3>
+<ul>
+	<li>Paper on <a href="http://arxiv.org/abs/1103.5391">Time Evolution with the DMRG Algorithm</a>.</li>
+	<li>Literate programming under <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/doc/">doc/</a></li>
+	<li><a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/alb10.pdf">Talk</a> I gave at Sandia National Laboratories on Oct. 2010</li>
+<li>Talk on SU(2) algorithm: <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/mm10posted.pdf">here</a>.
+Note: The performance issues mentioned in this talk related to the WFT have been solved in v2.2</li>
+<li>Link to paper on SU(2) symmetry: <a href="http://arxiv.org/abs/1003.1919" target="_blank">arXiv:1003.1919</a> (external link, will open in new page) </li>
+<li>DMRG++ v2.0 Manual: <a href="http://www.ornl.gov/%7Egz1/dmrgPlusPlus/manual/">Preliminary Incomplete Manual</a>. 
+<strike>Full Manual Will be posted here soon (see Schedule)</strike>. 
+<strike>Manual will be continually updated instead</strike>
+<font color="LimeGreen"><b>Literate programming will be used instead</b></font>
+</li>
+<li>Link to paper: <a href="http://arxiv.org/abs/0902.3185" target="_blank">arXiv:0902.3185</a> and 
+<a href="http://dx.doi.org/10.1016/j.cpc.2009.02.016" target="_blank">Computer Physics Communications 180 (2009) 1572-1578</a> (external link, will open in new page) </li>
+</ul>
+<hr>
+<br>
+<a name="schedule">&nbsp;</a>
+<h3>Release Schedule</h3>
+<table width="60%" border="1">
+<tbody><tr>
+<td colspan="2">
+I've been doing heavy development of DMRG++ to add new features, and improve performance. 
+At this stage it seems that it's possible to give a <b>tentative</b> schedule, as follows:
+</td>
+</tr><tr>
+<th>Date</th><th>Item</th></tr>
+<tr>
+<td><strike>Dec. 11, 2009</strike></td><td><strike>New features announced and frozen</strike>, 
+<font color="LimeGreen"><b>DONE see above</b></font></td>
+</tr>
+<tr>
+<td><strike>Jan. 11, 2010</strike></td><td><strike>DMRG++ version 2.0 (alpha) Released mainly for testing</strike>
+<font color="LimeGreen"><b>DONE see above</b></font></td>
+</tr>
+<tr><td>Jan. 11, 2010</td><td><strike>All posting and development frozen, except for bugs and documentation.</strike>
+</td></tr>
+<tr>
+<td>
+<strike>March 11, 2010</strike></td><td>DMRG++ v2.0 Manual will be posted</td></tr>
+<tr>
+<td>April, 2010</td><td><strike>Development resumes</strike> Development has resumed</td>
+</tr>
+<tr><td><strike>June 15, 2010</strike></td><td><strike>DMRG++ Full Manual and v2.2 release (will include static observables and how to calculate them)</strike></td>
+</tr>
+<tr><td></td><td><strike>DMRG++ Bleeding Edge repository</strike><font color="LimeGreen"><b>DONE</b></font></td>
+</tr>
+</tbody></table>
+<hr>
+<br>
+<h3>Feedback and Collaborations</h3>
+<table width="60%" border="0">
+<tbody><tr>
+<td>Feedback about DMRG++ can be sent directly to me at gz1 at&nbsp;ornl. gov or leave an issue at 
+[<a href="https://github.com/g1257/dmrgpp/issues">github.com</a>].
+</td>
+</tr>
+<tr>
+<td>If you are interested in using DMRG++ for a particular case study (tight-binding model for a specific
+material), you might consider submitting an application for a user proposal through the CNMS, during
+their call window. 
+There are calls throughout the year, see <a href="http://cnms.ornl.gov/">cnms.ornl.gov</a> for
+more information.
+</td>
+</tr>
+<tr>
+<td>The same is true if you or your group at your University or National Laboratory 
+has a strong interest in the technicalities of the DMRG algorithm (or related
+algorithms), and you like the approach taken by DMRG++.
+</td>
+</tr>
+<tr>
+<td>
+Thanks for your interest in DMRG++!
+</td>
+</tr>
+</tbody></table>
+<hr>
+<br>
+
+<h3>Other</h3>
+<ul>
+<li>DMRG++ has 17,000+ lines of code</li>
+<li>My ORNL webpage is <a href="http://www.ornl.gov/%7Egz1/">http://www.ornl.gov/~gz1/</a></li>
+</ul>
+
+<hr>
+ <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img src="../images/valid-html401.png" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+  </p>
+<br>
+<small>
+<a href="http://www.ornl.gov/ornlhome/disclaimers.shtml">Disclaimers</a>
+</small>
+<hr>
+<br>
+<br>
+<img alt=" " src="https://web.ornl.gov/cgi-bin/cgiwrap/gz1/http1.pl" height="1" width="1">
+<br>
+</div></body></html>
