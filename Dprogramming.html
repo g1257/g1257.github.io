@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>D-Programming</title>
+<meta name="keywords" content="condensed matter theory" />
+<meta name="description" content="condensed matter theory" />
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- header begins -->
+<div id="header">
+	<h3>
+             <a href="about.html#contact">D-Programming</a>
+        </h3>
+                <div id="mainnav">
+                    <ul>
+		<li><a href="index.html" title="">Home</a></li>
+		<li><a href="resume.html" title="">Resume</a></li>
+		<li><a href="projects.html" title="">Projects</a></li>
+		<li><a href="resources.html" title="">Resources</a></li>
+		<li><a href="collaborators.html" title="">Collaborators</a></li>
+		<li><a href="jobs.html" title="">Jobs</a></li>
+		<li><a href="about.html" title="">About</a></li>
+                    </ul>
+                </div>
+<!-- header ends -->
+</div>
+<!-- content begins -->
+<div id="content">
+<div class="specials">
+<h2>Website News</h2>
+				<!-- news item begin -->
+                                        <span class="calleft">4</span>
+                                        <span class="calright"><a href="http://ma.cms-initiative.jp/en/application-list/dmrg">Wednesday, June 4, 2014</a>
+                                            DMRG++ Mentioned in MateriApps
+
+                                        </span><br />
+                                        <div class="read"><a href="http://ma.cms-initiative.jp/en/application-list/dmrg">read more</a></div>
+					<br /><br />
+				<!-- news item end -->
+				<!-- news item begin -->
+                                        <span class="calleft">4</span>
+                                        <span class="calright"><a href="https://web.ornl.gov/~gz1/talks/">Wednesday, June 4, 2014</a>
+                                            Talk Computing Correlated Electrons: Roadmap and Roadblocks
+Presented at APS March Meeting 2014 on March 4, 2014
+
+                                        </span><br />
+                                        <div class="read"><a href="https://web.ornl.gov/~gz1/talks/">read more</a></div>
+					<br /><br />
+				<!-- news item end -->
+</div><!-- specials -->
+<div id="welcome">
+<h4 id="subnav">
+<a href="resources.html">resources</a> --> D-Programming</h4>
+<h1>D Programming Language for HPC</h1>
+<p>
+The question I want to investigate is if the
+<a href="http://d-programming-language.org/">D Programming Language</a>
+will be feasible for high-performance computing.
+</p>
+<ul class="normallist">
+<li><del>Can the compiler produce 64-bit executables?</del>
+<span class="mygreen">Yes</span></li>
+<li><del>Can executables run on capacity clusters?</del>
+<span class="mygreen">Yes, tested on glyph and its nodes</span></li>
+<li>Can executables run on high-end supercomputers?</li>
+<li>Can the linker link with pthreads?</li>
+<li><del>Can the linker link with BLAS and LAPACK?</del>
+<span class="mygreen">Yes, tested with dsyev_ entry</span></li>
+<li>Can the compiler call MPI? Can the linker link with MPI?</li>
+<li>Is there a slowdown?</li>
+</ul>
+<div class="final"></div>
+
+<h1>My D Diary</h1>
+<ul class="normallist">
+<li>git cloned dmd, druntime and phobos. Changed <tt>-m32</tt> into <tt>-m64</tt> for
+everything, and did <tt>make -f posix.mak</tt>.</li>
+<li>dmd.conf is now:
+<pre>
+; dmd.conf file for dmd
+; Names enclosed by %% are searched for in the existing environment
+; and inserted. The special name %@P% is replaced with the path
+; to this file.
+[Environment]
+DFLAGS=-I%@P%/../software/druntime/import -I%@P%/../software/phobos -L-L%@P%/../software/phobos/generated/linux/release/64
+</pre></li>
+<li>So, if using <tt>import std.stdio;</tt> one needs -L-lrt, else
+linker complains about clock_gettime undefined.
+Full comand line I'm using is <tt>dmd -O -release -m64 test.d -L-lrt</tt> and works fine.
+</li>
+</ul>
+<div class="final"></div>
+</div><!-- welcome ends -->
+<div style="clear: both"></div>
+</div>
+<!-- content ends -->
+    
+ <!-- footer begins -->
+<div id="footer">
+        <p>G. Alvarez &copy; 2010. <a href="http://www.ornl.gov/ornl/contact-us/security--privacy-notice">Disclaimers</a> |
+	    <a href="http://validator.w3.org/check?uri=https://web.ornl.gov/~gz1/index.html" title="Valid XHTML 1.0 Strict">XHTML</a> |
+	  <a href="https://jigsaw.w3.org/css-validator/check?uri=https://web.ornl.gov/~gz1/index.html" title="This page validates as CSS">CSS</a> |
+      Modified: Jun 4, 2014</p>
+<img src="https://web.ornl.gov/cgi-bin/cgiwrap/gz1/http1.pl" alt="" width="1" height="1"/>
+                    </div>
+                    <!-- footer ends -->
+    </body>
+</html>
+   
