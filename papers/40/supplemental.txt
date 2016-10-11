@@ -1,0 +1,148 @@
+
+
+Reproducing the numerical results.
+
+General:
+The DMRG++ code can be obtained with:
+git clone https://github.com/g1257/dmrgpp.git
+and PsimagLite with:
+git clone https://github.com/g1257/PsimagLite.git
+
+To compile:
+cd dmrgpp/src
+perl configure.pl
+(all defaults)
+make
+make observe
+
+Running the code:
+./dmrg -f input.inp &> output.txt
+Input files are given below.
+
+Figure 1:
+Run DMRG++ with this input:
+
+TotalNumberOfSites=8
+NumberOfTerms=1
+DegreesOfFreedom=1
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 1 1
+
+hubbardU    8  0 0 0 0         0 0 0 0
+potentialV  16  -0.5 -0.5 -0.5 -0.5     -0.5 -0.5 -0.5 -0.5
+                -0.5 -0.5 -0.5 -0.5     -0.5 -0.5 -0.5 -0.5
+
+Model=HubbardOneBand
+SolverOptions=MettsTargetting
+Version=version
+OutputFile=data.txt
+InfiniteLoopKeptStates=200
+FiniteLoops 4
+                   3 200 0 -3 200 0 -3 200 0 3 200 0
+RepeatFiniteLoopsTimes=500
+
+TargetElectronsUp=4
+TargetElectronsDown=4
+
+TSPTau=0.1
+TSPTimeSteps=5
+TSPAdvanceEach=6
+TSPAlgorithm=Krylov
+TSPSites 1 5
+TSPLoops 1 0
+TSPProductOrSum=product
+Beta=1.0
+TSPRngSeed=0
+TSPRotateBasis=1
+
+TSPOperator=raw
+RAW_MATRIX
+4 4
+1.0    0.0    0.0   0.0
+0.0    1.0    0.0   0.0
+0.0    0.0    1.0   0.0
+0.0    0.0    0.0   1.0
+FERMIONSIGN=1
+JMVALUES 0 0
+AngularFactor=1
+
+for mu=-0.5 and replace all -0.5 above with -1 for mu=-1.
+
+Figure 2:
+Use the same input as in Figure 1 but change the potential to:
+
+potentialV  16 0 0 1 -1         -1 1 0 0
+               0 0 1 -1         -1 1 0 0
+
+
+Figure 3 and 4:
+Run DMRG++ with, for example, this input:
+
+TotalNumberOfSites=20
+NumberOfTerms=1
+DegreesOfFreedom=1
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 1 1
+
+hubbardU    20     -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2
+potentialV  40     1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6
+                   1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6
+                   1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6
+
+Model=HubbardOneBand
+SolverOptions=MettsTargetting
+Version=version
+OutputFile=data.txt
+InfiniteLoopKeptStates=200
+FiniteLoops 7
+                   9 200 0 -9 200 0 -9 200 0  9 200 1
+                   9 200 1 -9 200 1 -9 200 1
+RepeatFiniteLoopsTimes=50
+RepeatFiniteLoopsFrom=3
+
+TargetElectronsUp=10
+TargetElectronsDown=10
+
+TSPTau=0.2
+TSPTimeSteps=5
+TSPAdvanceEach=18
+TSPAlgorithm=Krylov
+TSPSites 1 11
+TSPLoops 1 0
+TSPProductOrSum=product
+Beta=1
+TSPRngSeed=0
+TSPRotateBasis=2
+
+TSPOperator=raw
+RAW_MATRIX
+4 4
+1.0    0.0    0.0   0.0
+0.0    1.0    0.0   0.0
+0.0    0.0    1.0   0.0
+0.0    0.0    0.0   1.0
+FERMIONSIGN=1
+JMVALUES 0 0
+AngularFactor=1
+
+Densities can be obtained as before, and need to be checked so that the system is at
+quarter filling. Modify potentialV (the chemical potential) as needed.
+Then run the observe code:
+
+./observe -f input.inp -o dd,time &> observable.dd
+Average the matrices <\Delta^\dagger_i \Delta_j> at the given temperature found in
+observable.dd. Then average over distances R=|i-j| to obtain P_s(R). Include and discard
+values as explained in the text.
+
+For ladders, use:
+
+GeometryKind=ladder
+GeometryOptions=ConstantValues
+Connectors 1 1
+Connectors 1 1
+LadderLeg=2
+
+instead.
+

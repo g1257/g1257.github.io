@@ -1,0 +1,42 @@
+TotalNumberOfSites=6
+
+NumberOfTerms=2
+DegreesOfFreedom=1
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 1 0 
+
+DegreesOfFreedom=1
+GeometryKind=LongRange
+GeometryOptions=none
+Connectors 6 6
+0 -1 -1 -1 -1 -1
+-1 0 -1 -1 -1 -1
+-1 -1 0 -1 -1 -1
+-1 -1 -1 0 -1 -1
+-1 -1 -1 -1 0 -1
+-1 -1 -1 -1 -1 0
+
+Model=HubbardAncilla
+hubbardU	6 0.0 0.0 0.0 0.0 0.0 0.0
+potentialV	24 0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+
+SolverOptions=twositedmrg
+Version=version
+OutputFile=data1950.txt
+InfiniteLoopKeptStates=600
+FiniteLoops 12
+2 600 0 -2 600 0 -2 600 0 2 600 0 
+2 600 0 -2 600 0 -2 600 0 2 600 0
+2 600 0 -2 600 0 -2 600 0 2 600 0
+
+AdjustQuantumNumbers 4      2 4 1 1
+TargetElectronsTotal=8
+TargetSzPlusConst=4
+TargetExtra=2
+TargetExtra=2
+Orbitals=2
+FeAsMode=INT_ORBITAL0

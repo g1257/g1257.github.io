@@ -1,0 +1,56 @@
+TotalNumberOfSites=6
+
+NumberOfTerms=2
+DegreesOfFreedom=1
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 1 -1
+
+DegreesOfFreedom=1
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 1 0 
+
+Model=HubbardAncilla
+hubbardU	6  10.0 10.0 10.0 10.0 10.0 10.0  
+potentialV	24 0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+                   0.0 0.0 0.0 0.0 0.0 0.0 
+
+SolverOptions=restart,TargetingAncilla,twositedmrg
+Version=version
+OutputFile=dataHubC2.txt
+InfiniteLoopKeptStates=100
+FiniteLoops 4
+
+5 200 0 -5 200 0 -5 200 0  5 200 0
+
+RepeatFiniteLoopsFrom=0
+RepeatFiniteLoopsTimes=202
+
+TargetElectronsTotal=8
+TargetSzPlusConst=4
+TargetExtra=2
+TargetExtra=2
+AdjustQuantumNumbers 4 2 4 1 1
+Orbitals=2
+FeAsMode=INT_ORBITAL0
+
+RestartFilename=data1950.txt
+
+TSPTau=0.1
+TSPTimeSteps=5
+TSPAdvanceEach=4
+TSPAlgorithm=Krylov
+TSPSites 1 3 
+TSPLoops 1 0 
+TSPProductOrSum=product
+GsWeight=0.0
+
+TSPOperator=cooked
+COOKED_OPERATOR=i
+COOKED_EXTRA 2 0 0
+FERMIONSIGN=1
+JMVALUES 0 0
+AngularFactor=1

@@ -1,0 +1,51 @@
+TotalNumberOfSites=12
+NumberOfTerms=2
+
+DegreesOfFreedom=1
+GeometryKind=ladder
+GeometryOptions=none
+Connectors 10 -1.0 0.0 -1.0 0.0 -1.0 0.0 -1.0 0.0 -1.0 0.0 
+Connectors 6  0 0 0 0 0 0
+LadderLeg=2
+
+DegreesOfFreedom=1
+GeometryKind=ladder
+GeometryOptions=none
+Connectors 10 -1.0 0.0 -1.0 0.0 -1.0 0.0 -1.0 0.0 -1.0 0.0 
+Connectors 6  0 0 0 0 0 0
+LadderLeg=2
+
+Model=Heisenberg
+HeisenbergTwiceS=1
+
+SolverOptions=twositedmrg,restart,TargetingAncilla
+Version=version
+OutputFile=data1801.txt
+InfiniteLoopKeptStates=64
+FiniteLoops 4
+
+5 200 0 -5 200 0 -5 200 0  5 200 0
+
+RepeatFiniteLoopsFrom=0
+RepeatFiniteLoopsTimes=202
+
+TargetElectronsTotal=12
+TargetSzPlusConst=6
+RestartFilename=dataGS.txt
+
+TSPTau=0.1
+TSPTimeSteps=5
+TSPAdvanceEach=10
+TSPAlgorithm=Krylov
+TSPSites 1 6 
+TSPLoops 1 6 
+TSPProductOrSum=sum
+TSPUseQns=1
+GsWeight=0.0
+
+TSPOperator=cooked
+COOKED_OPERATOR=i
+COOKED_EXTRA 2 0 0
+FERMIONSIGN=1
+JMVALUES 0 0
+AngularFactor=1

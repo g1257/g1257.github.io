@@ -1,0 +1,144 @@
+REPRODUCING THE NUMERICAL RESULTS.
+
+******************************************************************************************************************
+
+GENERAL:
+The DMRG++ code can be obtained with:
+git clone https://github.com/g1257/dmrgpp.git
+and PsimagLite with:
+git clone https://github.com/g1257/PsimagLite.git
+
+******************************************************************************************************************
+
+TO COMPILE:
+cd dmrgpp/src
+perl configure.pl
+(all defaults)
+make
+make observe
+
+******************************************************************************************************************
+
+RUNNING THE CODE:
+./dmrg -f input.inp &> output.txt
+Input files are given below.
+
+******************************************************************************************************************
+
+FIGURE 2(a), 4, and 5(top left panel): (file: NqL24JU0.25n3.25.o24030-1:10)
+Run DMRG++ with this input:
+
+TotalNumberOfSites=24
+NumberOfTerms=1
+DegreesOfFreedom=3
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 3 3
+0.5 0 -0.1
+0 0.5 -0.1
+-0.1 -0.1 0.15
+Model=FeAsBasedSc
+Orbitals=3
+hubbardU 4 0.2 .0750 -.100 -.050
+potentialV 144 
+-0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 
+-0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 
+SolverOptions=CorrectionTargetting
+CorrectionA=0.0005
+Version=version
+OutputFile=data340.txt
+InfiniteLoopKeptStates=200
+FiniteLoops 49  
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 0 
+11 400 0 -11 400 0 -11 400 0 11 400 1 
+11 400 1 
+TargetElectronsUp=39
+TargetElectronsDown=39
+Threads=16
+LanczosSteps=500
+
+------------------------------------------------------------------------------------------------------------------
+
+This input will give the result for U=0.2; to reproduce the rest of the data sets just 
+change above "hubbardU 4 0.2" by the corresponding value of valU: "hubbardU 4 valU".
+
+Then, by changing the filling through the lines: "TargetElectronsUp=XX" and 
+"TargetElectronsDown=XX", it is possible to reproduce the remaining panels of 
+FIGURES 4 and 5.
+
+******************************************************************************************************************
+
+FIGURE 2(b): (file: KrhoJU0.25L24n4.5.o112048-1:20)
+Run DMRG++ using this input:
+
+TotalNumberOfSites=24
+NumberOfTerms=1
+DegreesOfFreedom=3
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 3 3
+0.5 0 -0.1
+0 0.5 -0.1
+-0.1 -0.1 0.15
+Model=FeAsBasedSc
+Orbitals=3
+hubbardU 4 0.1 .0375 -.050 -.025
+potentialV 144 
+-0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 
+-0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 
+SolverOptions=CorrectionTargetting
+CorrectionA=0.0005
+Version=version
+OutputFile=data340.txt
+InfiniteLoopKeptStates=250
+FiniteLoops 49  
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 0 
+11 450 0 -11 450 0 -11 450 0 11 450 1 
+11 450 1 
+TargetElectronsUp=54
+TargetElectronsDown=54
+Threads=8
+
+******************************************************************************************************************
+
+OBSERVABLES
+
+In order to get physical observables such as orbital occupancy and correlations, a 
+different code must be run. (The program, "observe", is also provided with DMRG++.)
+To run the observe code just type:
+
+./observe -f input.inp -o onepoint,szsz,s+s-,ntnt,ngng &> observables.dat
+
+This code will output the correlation matrices for spin and total charge which must be 
+properly handled to get either the structure factors or their spatial dependence. The 
+specifics of the measurements and correlations are explained in the paper and the 
+supplementary material.
+
