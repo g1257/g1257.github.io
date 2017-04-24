@@ -46,66 +46,73 @@ Panel]</a></div>
 <!-- left column -->
 <div id="contents">
 <h2>Directory and Files For Your Paper</h2>
+<div class="memo">
 <p>Make sure you have the latest version of this memo.</p>
 <p>Version Date: <b>04/24/2017</b>.</p>
 <p>Type of Memo: Normative</p>
-<hr />
+</div>
 <ol>
-<li>[Assigned Number] If you are the first or writing author of a
-paper where I will be a co-author, please send me a description of
-the paper (ideally title and abstract), and I will send you an
-assigned number. [NOTE 1.1: All examples below use the number 58
-for illustration purposes. DO NOT use 58, but your assigned number
-instead.] [NOTE 1.2: The $ sign marks example commands to be
-executed in a shell.]</li>
-<li>[Directory] Create a directory named paper followed by your
-assigned number. [Example: $ mkdir paper58]</li>
-<li>[GIT] Initialize git repository in that directory. [Example: $
-cd paper58; git init]</li>
-<li>[README] Create a plain text README file with a description of
-this paper, ideally title and abstract. git add this README
-file.</li>
-<li>[Manuscript] Create a draft/v1 directory containing your first
-version of your paper. git add your manuscript file.</li>
-<li>[Figures] Inside draft/v1 git add PDF figures to be included.
-It is best if you include in this directory and git add the tikz or
-gnuplot sources for the figures, and all dependent data files.</li>
-<li>[Bibliography] Use thesis.bib by linking it, do not copy
-thesis.bib, do not git add thesis.bib. git add the produced bbl
-file. Do not submit thesis.bib to journal, submit generated bbl
-file instead. [Example: $ ln -s ../../../thesis/thesis.bib; pdftex
-paper58; bibtex paper58; git add paper58.bbl]</li>
-<li>[Compilation] Add all files required for TeX compilation of
-your manuscript. DO NOT git add files produced by TeX except for
-the bbl file.</li>
-<li>[Supplemental] Include supplemental in draft/v1 with all
-auxiliary files needed to compile the TeX. Guidelines to write such
-supplemental will be provided in a different memorandum.</li>
-<li>[Letter] Letter to the editor should be in plain text, and git
-added under draft/v1</li>
-<li>[Results] The directory results may optionally be present, and
-used to store cooked results, but don't git add big files.</li>
-<li>[Papers] The directory papers may store PDFs of relevant
-papers. Do NOT git add them.</li>
-<li>[Discussions] The directory theory may contain text files of
-discussion that won't appear in paper or supplement. Add here
-emails and discussion related to the paper. This may be committed
-to git.</li>
-<li>[Versions] draft/v2 may optionally contain the new version of
-the paper after referees comments, git add answer to referees in
-this directory as well. Additional optional directories, such as
-draft/v3, can be added only if there are subsequent resubmissions
-until publication. Source files in all these directories should be
-added.</li>
-<li>[arXiv] The directory arXiv/v1 should contain the version
-submitted to the arXiv. If other versions are posted in the arXiv
-they may be located in directories arXiv/v2, etc. git commit all
-source files.</li>
-<li>[Business Sensitive] The whole directory must be treated as
-Business Sensitive and NOT publicly posted. This remains true even
-after publication.</li>
-<li>[Data preservation] All published raw data must be preserved
-and archived long term.</li>
+<li><span class="itemtitle">[Assigned Number]</span> If you are the
+first or writing author of a paper where I will be a co-author,
+please send me a description of the paper (ideally title and
+abstract), and I will send you an assigned number. [NOTE 1.1: All
+examples below use the number 58 for illustration purposes. DO NOT
+use 58, but your assigned number instead.] [NOTE 1.2: The $ sign
+marks example commands to be executed in a shell.]</li>
+<li><span class="itemtitle">[Directory]</span> Create a directory
+named paper followed by your assigned number. [Example: $ mkdir
+paper58]</li>
+<li><span class="itemtitle">[GIT]</span> Initialize git repository
+in that directory. [Example: $ cd paper58; git init]</li>
+<li><span class="itemtitle">[README]</span> Create a plain text
+README file with a description of this paper, ideally title and
+abstract. git add this README file.</li>
+<li><span class="itemtitle">[Manuscript]</span> Create a draft/v1
+directory containing your first version of your paper. git add your
+manuscript file.</li>
+<li><span class="itemtitle">[Figures]</span> Inside draft/v1 git
+add PDF figures to be included. It is best if you include in this
+directory and git add the tikz or gnuplot sources for the figures,
+and all dependent data files.</li>
+<li><span class="itemtitle">[Bibliography]</span> Use thesis.bib by
+linking it, do not copy thesis.bib, do not git add thesis.bib. git
+add the produced bbl file. Do not submit thesis.bib to journal,
+submit generated bbl file instead. [Example: $ ln -s
+../../../thesis/thesis.bib; pdftex paper58; bibtex paper58; git add
+paper58.bbl]</li>
+<li><span class="itemtitle">[Compilation]</span> Add all files
+required for TeX compilation of your manuscript. DO NOT git add
+files produced by TeX except for the bbl file.</li>
+<li><span class="itemtitle">[Supplemental]</span> Include
+supplemental in draft/v1 with all auxiliary files needed to compile
+the TeX. Guidelines to write such supplemental will be provided in
+a different memorandum.</li>
+<li><span class="itemtitle">[Letter]</span> Letter to the editor
+should be in plain text, and git added under draft/v1</li>
+<li><span class="itemtitle">[Results]</span> The directory results
+may optionally be present, and used to store cooked results, but
+don't git add big files.</li>
+<li><span class="itemtitle">[Papers]</span> The directory papers
+may store PDFs of relevant papers. Do NOT git add them.</li>
+<li><span class="itemtitle">[Discussions]</span> The directory
+theory may contain text files of discussion that won't appear in
+paper or supplement. Add here emails and discussion related to the
+paper. This may be committed to git.</li>
+<li><span class="itemtitle">[Versions]</span> draft/v2 may
+optionally contain the new version of the paper after referees
+comments, git add answer to referees in this directory as well.
+Additional optional directories, such as draft/v3, can be added
+only if there are subsequent resubmissions until publication.
+Source files in all these directories should be added.</li>
+<li><span class="itemtitle">[arXiv]</span> The directory arXiv/v1
+should contain the version submitted to the arXiv. If other
+versions are posted in the arXiv they may be located in directories
+arXiv/v2, etc. git commit all source files.</li>
+<li><span class="itemtitle">[Business Sensitive]</span> The whole
+directory must be treated as Business Sensitive and NOT publicly
+posted. This remains true even after publication.</li>
+<li><span class="itemtitle">[Data preservation]</span> All
+published raw data must be preserved and archived long term.</li>
 </ol>
 <br />
 <div class="final"></div>

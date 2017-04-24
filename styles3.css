@@ -24,9 +24,22 @@ a[href^="https://"]:after {
 	padding-right: 5px;
 }
 
-a[href*="//g1257.github.io/"]:after {
+a[href*="//web.ornl.gov/"]:after {
 	content: '';
 	margin: 0;
+}
+
+div.memo {
+	background-color: #dddddd;
+	color: #000000;
+	border: 2px solid #111111;
+	display:block;
+	padding: 10px;
+	margin-bottom: 10px;  
+}
+
+span.itemtitle {
+	font-style: italic;
 }
 
 @media only screen {
@@ -271,69 +284,69 @@ p {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 300;
-	src: local("Open Sans Light"), local("OpenSans-Light"), url("https://g1257.github.io/fonts/opensans/OpenSans-Light.ttf");
+	src: local("Open Sans Light"), local("OpenSans-Light"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-Light.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: italic;
 	font-weight: 300;
-	src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("https://g1257.github.io/fonts/opensans/OpenSans-LightItalic.ttf");
+	src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-LightItalic.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 400;
-	src: local("Open Sans"), local("OpenSans"), url("https://g1257.github.io/fonts/opensans/OpenSans-Regular.ttf");
+	src: local("Open Sans"), local("OpenSans"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-Regular.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: italic;
 	font-weight: 400;
-	src: local("Open Sans Italic"), local("OpenSans-Italic"), url("https://g1257.github.io/fonts/opensans/OpenSans-Italic.ttf");
+	src: local("Open Sans Italic"), local("OpenSans-Italic"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-Italic.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 600;
-	src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("https://g1257.github.io/fonts/opensans/OpenSans-Semibold.ttf");
+	src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-Semibold.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: italic;
 	font-weight: 600;
-	src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-SemiboldItalic.ttf");
+	src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-SemiboldItalic.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 700;
-	src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://g1257.github.io/fonts/opensans/OpenSans-Bold.ttf");
+	src: local("Open Sans Bold"), local("OpenSans-Bold"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-Bold.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: italic;
 	font-weight: 700;
-	src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-BoldItalic.ttf");
+	src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-BoldItalic.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 800;
-	src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url("https://g1257.github.io/fonts/opensans/OpenSans-ExtraBold.ttf");
+	src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-ExtraBold.ttf");
 }
 
 @font-face {
 	font-family: "Open Sans";
 	font-style: italic;
 	font-weight: 800;
-	src: local("Open Sans Extrabold Italic"), local("OpenSans-ExtraboldItalic"), url("https://g1257.github.io/fonts/opensans/OpenSans-ExtraBoldItalic.ttf");
+	src: local("Open Sans Extrabold Italic"), local("OpenSans-ExtraboldItalic"), url("https://web.ornl.gov/~gz1/fonts/opensans/OpenSans-ExtraBoldItalic.ttf");
 }
 
