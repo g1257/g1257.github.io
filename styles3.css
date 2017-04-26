@@ -24,10 +24,24 @@ a[href^="https://"]:after {
 	padding-right: 5px;
 }
 
-a[href*="//web.ornl.gov/"]:after {
+a[href*="//g1257.github.io/"]:after {
 	content: '';
 	margin: 0;
 }
+
+table.horiz {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.horiz {
+    border-bottom: 1px solid #ccc;
+}
+
+th.horiz {
+    text-align: left;
+}
+
 
 div.memo {
 	background-color: #dddddd;

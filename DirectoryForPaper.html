@@ -166,6 +166,97 @@ published raw data must be preserved and archived long term.</li>
 </ol>
 <br />
 <div class="final"></div>
+<h3>Example of directory structure</h3>
+<table class="horiz" summary="Example of directory structure">
+<tr class="horiz">
+<th class="horiz">directory</th>
+<th class="horiz">&nbsp;&nbsp;&nbsp;</th>
+<th class="horiz">Description</th>
+</tr>
+<tr class="horiz">
+<td>paper58/</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="horiz">
+<td>paper58/.git</td>
+<td></td>
+<td>Git directory, created automatically by git init</td>
+</tr>
+<tr class="horiz">
+<td>paper58/README</td>
+<td></td>
+<td>Contains description of this paper, ideally title and
+abstract</td>
+</tr>
+<tr class="horiz">
+<td>paper58/draft/v1</td>
+<td></td>
+<td>First version of the draft, including first submission
+Directory contains cooked figures, and supplemental, and all files
+needed to compile TeX sources. Link thesis.bib here as well.
+Include and git add letter to the editor in this directory. Git
+commit all sources files. DO NOT git add files produced by TeX,
+except for the bbl that must be submitted. DO NOT git add
+thesis.bib, just link it. Git add the figures in PDF. It is best if
+you include in this directory and git add the tikz or gnuplot
+sources for the figures, and all dependent data files.</td>
+</tr>
+<tr class="horiz">
+<td>paper58/draft/v2</td>
+<td></td>
+<td>[optional] Resubmission, after referees comments, include
+answer to referees in this directory.</td>
+</tr>
+<tr class="horiz">
+<td>paper58/draft/v3</td>
+<td></td>
+<td>[optional] Add a version only if there is another
+resubmission</td>
+</tr>
+<tr class="horiz">
+<td>...</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="horiz">
+<td>paper58/arXiv/v1</td>
+<td></td>
+<td>contains the first version submitted to the arXiv. git commit
+all source files.</td>
+</tr>
+<tr class="horiz">
+<td>paper58/arXiv/v2</td>
+<td></td>
+<td>[optional] If other versions are posted in the arXiv they may
+be located in directories arXiv/v2, etc. git commit all source
+files.</td>
+</tr>
+<tr class="horiz">
+<td>...</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="horiz">
+<td>paper58/results</td>
+<td></td>
+<td>[optional] Cooked results, don't add big files here</td>
+</tr>
+<tr class="horiz">
+<td>paper58/papers</td>
+<td></td>
+<td>[optional] You may store here PDFs of relevant papers. Do NOT
+git add them.</td>
+</tr>
+<tr class="horiz">
+<td>paper58/theory</td>
+<td></td>
+<td>[optional] Add here .tex files containing discussion that won't
+appear in paper or supplement. Add here emails and discussion
+related to the paper. This may be committed to git.</td>
+</tr>
+</table>
+<div class="final"></div>
 </div>
 <!-- contents ends -->
 <div id="footer">
@@ -176,7 +267,7 @@ published raw data must be preserved and archived long term.</li>
 "https://validator.w3.org/check?uri=https://g1257.github.io/DirectoryForPaper.html"
 title="Valid XHTML 1.0 Strict">XHTML</a> | <a href=
 "https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/DirectoryForPaper.html"
-title="This page validates as CSS">CSS</a> | Modified: Apr 24,
+title="This page validates as CSS">CSS</a> | Modified: Apr 26,
 2017</p>
 </div>
 </div>
