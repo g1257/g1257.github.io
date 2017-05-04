@@ -49,7 +49,7 @@ div.memo {
 	border: 2px solid #111111;
 	display:block;
 	padding: 10px;
-	margin-bottom: 10px;  
+	margin-bottom: 10px;
 }
 
 span.itemtitle {
@@ -120,67 +120,73 @@ a:visited {
 	background: #0074d9;
 }
 
-#nav1 {
-	margin: 0px auto; 
+nav {
+	margin: 0px auto;
 	background: #0074d9;
 	text-align: center;
 }
 
-#nav1 ul ul {
+nav ul ul {
 	display: none;
 }
 
-	#nav1 ul li:hover > ul {
-		display: block;
-	}
+nav ul li:hover > ul {
+	display: block;
+}
 
 
-#nav1 ul {
+nav ul {
 	background: #0074d9;
 	padding: 0 1em;
 	list-style: none;
 	position: relative;
 	display: inline-table;
 }
-	#nav1 ul:after {
-		content: ""; clear: both; display: block;
-	}
 
-	#nav1 ul li {
-		float: left;
-	}
-		#nav1 ul li:hover {
-			background: #69a5ff;
-		}
-			#nav1 ul li:hover a {
-				color: #fff;
-			}
-		
-		#nav1 ul li a {
-			display: block; padding: 1em 1em;
-			color: #dddddd;	
-			text-decoration: none;
-			font-size: 18px;
-			line-height: 22px;
-		}
-		
-	#nav1 ul ul {
-		background: #69a5ff; padding: 0;
-		position: absolute; top: 100%;
-		text-align: left;
-	}
-		#nav1 ul ul li {
-			float: none; 
-			border-top: 1px solid #9ec5ff;
-			border-bottom: 1px solid #cde1ff; position: relative;
-		}
-			#nav1 ul ul li a {
-				padding: 1em 1em;
-				color: #fff;
-			}	
-				nav ul ul li a:hover {
-					background: #69a5ff;
-				}
+nav ul:after {
+	content: ""; clear: both; display: block;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li:hover {
+		background: #69a5ff;
+}
+
+nav ul li:hover a {
+	color: #fff;
+}
+
+nav ul li a {
+	display: block; padding: 1em 1em;
+	color: #dddddd;	
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+nav ul ul {
+	background: #69a5ff; padding: 0;
+	position: absolute; top: 100%;
+	text-align: left;
+}
+
+nav ul ul li {
+	float: none;
+	border-top: 1px solid #9ec5ff;
+	border-bottom: 1px solid #cde1ff; position: relative;
+}
+
+nav ul ul li a {
+	padding: 1em 1em;
+	color: #fff;
+}
+
+nav ul ul li a:hover {
+	background: #69a5ff;
+}
 		
 	#nav1 ul ul ul {
 		position: absolute; left: 100%; top:0;
@@ -213,16 +219,15 @@ a:visited {
 	width: 50%;
 }
 
-#footer {
+footer {
 	display: block;
 	clear: left;
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	min-height: 50px;
 	text-align: center;
 	background: #ffffff;
 	color: #000000;
-	
 }
 
 #footer a:link {
@@ -268,7 +273,7 @@ p {
 
 .announce {
 	display: block;
-	background: #f6d000; 
+	background: #f6d000;
 	padding: 2px 10px 10px 10px;
 	border: 2px solid #0074D9;
 }
