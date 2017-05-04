@@ -93,43 +93,46 @@ a:visited {
 	background: #0000cc;
 }
 
-#nav1 {
+nav {
 	margin: 0px auto; 
 	background: #0000aa;
 	text-align: center;
 }
 
-#nav1 ul ul {
+nav ul ul {
 	display: none;
 }
 
-	#nav1 ul li:hover > ul {
+nav ul li:hover > ul {
 		display: block;
 	}
 
 
-#nav1 ul {
+nav1 ul {
 	background: #0000aa;
 	padding: 0 1em;
 	list-style: none;
 	position: relative;
 	display: inline-table;
 }
-	#nav1 ul:after {
+
+nav ul:after {
 		content: ""; clear: both; display: block;
 	}
 
-	#nav1 ul li {
+nav ul li {
 		float: left;
 	}
-		#nav1 ul li:hover {
+
+nav ul li:hover {
 			background: #0000cc;
 		}
-			#nav1 ul li:hover a {
+
+nav ul li:hover a {
 				color: #fff;
 			}
 		
-		#nav1 ul li a {
+nav ul li a {
 			display: block; padding: 1em 1em;
 			color: #dddddd;	
 			text-decoration: none;
@@ -137,17 +140,19 @@ a:visited {
 			line-height: 22px;
 		}
 		
-	#nav1 ul ul {
+nav ul ul {
 		background: #0000ee; padding: 0;
 		position: absolute; top: 100%;
 		text-align: left;
 	}
-		#nav1 ul ul li {
+
+nav ul ul li {
 			float: none; 
 			border-top: 1px solid #000000;
 			border-bottom: 1px solid #eeeeee; position: relative;
 		}
-			#nav1 ul ul li a {
+
+nav ul ul li a {
 				padding: 1em 1em;
 				color: #fff;
 			}	
@@ -155,7 +160,7 @@ a:visited {
 					background: #0000ee;
 				}
 		
-	#nav1 ul ul ul {
+nav ul ul ul {
 		position: absolute; left: 100%; top:0;
 	}
 
@@ -186,7 +191,7 @@ a:visited {
 	width: 50%;
 }
 
-#footer {
+footer {
 	display: block;
 	clear: left;
 	width: 100%; 
@@ -195,15 +200,14 @@ a:visited {
 	text-align: center;
 	background: #ffffff;
 	color: #000000;
-	
 }
 
-#footer a:link {
+footer a:link {
         color: #000000;
 	text-decoration: underline;
 }
 
-#footer a:visited {
+footer a:visited {
         color: #000000;
 	text-decoration: underline;
 }
