@@ -16,7 +16,7 @@ h3 {
 
 a[href^="http://"]:after {
 	content: url(IconExternalLinkRed.png);
-	padding-right: 5px;	
+	padding-right: 5px;
 }
 
 a[href^="https://"]:after {
@@ -27,6 +27,33 @@ a[href^="https://"]:after {
 a[href*="//g1257.github.io/"]:after {
 	content: '';
 	margin: 0;
+}
+
+table.horiz {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.horiz {
+    border-bottom: 1px solid #ccc;
+}
+
+th.horiz {
+    text-align: left;
+}
+
+
+div.memo {
+	background-color: #dddddd;
+	color: #000000;
+	border: 2px solid #111111;
+	display:block;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+span.itemtitle {
+	font-style: italic;
 }
 
 @media only screen {
@@ -93,22 +120,20 @@ a:visited {
 	background: #0000cc;
 }
 
-nav {
-	margin: 0px auto; 
+#nav1 {
+	margin: 0px auto;
 	background: #0000aa;
 	text-align: center;
 }
 
-nav ul ul {
-	display: none;
+#nav1 ul:after {
+	content: "";
+	clear: both;
+	display: block;
 }
 
-nav ul li:hover > ul {
-		display: block;
-	}
 
-
-nav1 ul {
+#nav1 ul {
 	background: #0000aa;
 	padding: 0 1em;
 	list-style: none;
@@ -116,53 +141,23 @@ nav1 ul {
 	display: inline-table;
 }
 
-nav ul:after {
-		content: ""; clear: both; display: block;
-	}
+#nav1 ul li {
+	float: left;
+}
 
-nav ul li {
-		float: left;
-	}
+#nav1 ul li a {
+	display: block;
+	padding: 1em 1em;
+	color: #dddddd;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 22px;
+}
 
-nav ul li:hover {
-			background: #0000cc;
-		}
-
-nav ul li:hover a {
-				color: #fff;
-			}
-		
-nav ul li a {
-			display: block; padding: 1em 1em;
-			color: #dddddd;	
-			text-decoration: none;
-			font-size: 18px;
-			line-height: 22px;
-		}
-		
-nav ul ul {
-		background: #0000ee; padding: 0;
-		position: absolute; top: 100%;
-		text-align: left;
-	}
-
-nav ul ul li {
-			float: none; 
-			border-top: 1px solid #000000;
-			border-bottom: 1px solid #eeeeee; position: relative;
-		}
-
-nav ul ul li a {
-				padding: 1em 1em;
-				color: #fff;
-			}	
-				nav ul ul li a:hover {
-					background: #0000ee;
-				}
-		
-nav ul ul ul {
-		position: absolute; left: 100%; top:0;
-	}
+#nav1 ul li a:hover {
+	background: #0000cc;
+	color: #ffffff;
+}
 
 #activeItem {
 	background: #0000ee;
@@ -194,7 +189,7 @@ nav ul ul ul {
 footer {
 	display: block;
 	clear: left;
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	min-height: 50px;
 	text-align: center;
@@ -245,7 +240,7 @@ p {
 
 .announce {
 	display: block;
-	background: #f6d000; 
+	background: #f6d000;
 	padding: 2px 10px 10px 10px;
 	border: 2px solid #0074D9;
 }

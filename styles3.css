@@ -120,22 +120,19 @@ a:visited {
 	background: #0074d9;
 }
 
-nav {
+#nav1 {
 	margin: 0px auto;
 	background: #0074d9;
 	text-align: center;
 }
 
-nav ul ul {
-	display: none;
-}
-
-nav ul li:hover > ul {
+#nav1 ul:after {
+	content: "";
+	clear: both;
 	display: block;
 }
 
-
-nav ul {
+#nav1 ul {
 	background: #0074d9;
 	padding: 0 1em;
 	list-style: none;
@@ -143,56 +140,27 @@ nav ul {
 	display: inline-table;
 }
 
-nav ul:after {
-	content: ""; clear: both; display: block;
-}
-
-nav ul li {
+#nav1 ul li {
 	float: left;
+	position: relative;
 }
 
-nav ul li:hover {
-		background: #69a5ff;
-}
-
-nav ul li:hover a {
-	color: #fff;
-}
-
-nav ul li a {
-	display: block; padding: 1em 1em;
-	color: #dddddd;	
+#nav1 ul li a {
+	display: block; 
+	padding: 1em 1em;
+	color: #dddddd;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 22px;
 }
 
-nav ul ul {
-	background: #69a5ff; padding: 0;
-	position: absolute; top: 100%;
-	text-align: left;
-}
-
-nav ul ul li {
-	float: none;
-	border-top: 1px solid #9ec5ff;
-	border-bottom: 1px solid #cde1ff; position: relative;
-}
-
-nav ul ul li a {
-	padding: 1em 1em;
-	color: #fff;
-}
-
-nav ul ul li a:hover {
+#nav1 ul li a:hover {
 	background: #69a5ff;
+	color: #ffffff;
 }
 		
-	#nav1 ul ul ul {
-		position: absolute; left: 100%; top:0;
-	}
-
 #activeItem {
+	color: #ffffff;
 	background: #69a5ff;
 }
 
@@ -230,12 +198,12 @@ footer {
 	color: #000000;
 }
 
-#footer a:link {
+footer a:link {
         color: #000000;
 	text-decoration: underline;
 }
 
-#footer a:visited {
+footer a:visited {
         color: #dddddd;
 	text-decoration: underline;
 }
