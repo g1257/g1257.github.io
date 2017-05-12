@@ -16,7 +16,7 @@ h3 {
 
 a[href^="http://"]:after {
 	content: url(IconExternalLinkRed.png);
-	padding-right: 5px;
+	padding-right: 5px;	
 }
 
 a[href^="https://"]:after {
@@ -54,6 +54,22 @@ div.memo {
 
 span.itemtitle {
 	font-style: italic;
+}
+
+.leftInner {
+	margin: 5px 0px 5px 10px;
+}
+
+.leftOuter {
+	margin: 5px 0px 5px 10px;
+}
+
+.leftUlOuter {
+	list-style-type: decimal;
+}
+
+.leftUlInner {
+	list-style-type: lower-latin;
 }
 
 @media only screen {
@@ -124,6 +140,7 @@ a:visited {
 	margin: 0px auto;
 	background: #0000aa;
 	text-align: center;
+	clear: left;
 }
 
 #nav1 ul:after {
@@ -143,10 +160,11 @@ a:visited {
 
 #nav1 ul li {
 	float: left;
+	position: relative;
 }
 
 #nav1 ul li a {
-	display: block;
+	display: block; 
 	padding: 1em 1em;
 	color: #dddddd;
 	text-decoration: none;
@@ -167,30 +185,22 @@ a:visited {
 	min-width: 10%;
 	max-width: 20%;
 	float: left;
-	padding-left: 1em;
+	padding-left: 2em;
 	padding-right: 1em;
 	background: #fafafa;
 }
 
-#contents {
+#contents, #contentsNoPanel {
 	margin: 0 auto;
 	padding-left: 2em;
 	padding-bottom: 2em;
-	width: 50%;
-}
-
-#contentsNoPanel {
-	margin: 0 auto;
-	padding-left: 2em;
-	padding-bottom: 2em;
-	width: 50%;
+	max-width: 60em;
+	overflow: hidden;
 }
 
 footer {
 	display: block;
 	clear: left;
-	width: 100%;
-	height: 100%;
 	min-height: 50px;
 	text-align: center;
 	background: #ffffff;
