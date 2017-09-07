@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="generator" content=
-"HTML Tidy for HTML5 for Linux version 5.1.25">
+"HTML Tidy for HTML5 for Linux version 5.4.0">
 <meta charset="utf-8">
 <meta name="keywords" content="condensed matter theory">
 <meta name="description" content="condensed matter theory">
@@ -36,29 +36,32 @@
 </div>
 <!-- nav1 -->
 <div id="leftcolumn"><a href=
-"https://g1257.github.io/keys.html">[Show Left Panel]</a></div>
+"https://g1257.github.io/keys.html">[+] Show Left Panel</a></div>
 <!-- left column -->
 <div id="contents">
 <h1>Keys</h1>
 <h2>Preliminary</h2>
-The below write-up assumes some familiarity with <tt>GNUPG</tt> and
-<tt>git</tt>. The use of <tt>git pull --verify-signatures</tt>
-requires <tt>git</tt> version at least 1.8. When <tt>GNUPG gpg</tt>
-commands are listed below, they are only meant as hints or starting
-points.
+The below write-up assumes some familiarity with <span class=
+"typedText">GNUPG</span> and <span class="typedText">git</span>.
+The use of <span class="typedText">git pull
+--verify-signatures</span> requires <span class=
+"typedText">git</span> version at least 1.8. When <span class=
+"typedText">GNUPG gpg</span> commands are listed below, they are
+only meant as hints or starting points.
 <h2>Step 1: Have you imported my keys before?</h2>
 <p>Have you imported my public keys before?<br>
 ☐ Yes. Then Go to <a href="#step6">Step 6</a>.<br>
 ☐ No. Then Go to Step 2.<br></p>
 <h2>Step 2: Download my public keys</h2>
-<p>Download the <tt>keyID.txt</tt> files linked in the <a href=
-"#tableofkeys">table below</a> and listed as valid.</p>
+<p>Download the <span class="typedText">keyID.txt</span> files
+linked in the <a href="#tableofkeys">table below</a> and listed as
+valid.</p>
 <h2><a id="import">Step3: Import my public keys</a></h2>
 <pre>
 gpg --import keyID.txt
 </pre>
-<p>where <tt>keyID.txt</tt> has to be replaced with the files you
-downloaded in the previous step.</p>
+<p>where <span class="typedText">keyID.txt</span> has to be
+replaced with the files you downloaded in the previous step.</p>
 <h2>Step 4: Verify my master key</h2>
 <p>You <span class="myemph">MUST</span> verify the fingerprint of
 my master key, and if it matches then you <span class=
@@ -89,13 +92,13 @@ gpg --check-sigs
 <li>Make sure keys are still valid. See table below.</li>
 <li>Re-import expired but valid keys if needed.</li>
 <li>Adhere to key usage, as described below.</li>
-<li>When pulling do <tt>git pull --verify-signatures</tt> instead
-of just <tt>git pull</tt>.</li>
-<li>To verify a given commit <tt>git log --show-signature
--1</tt></li>
+<li>When pulling do <span class="typedText">git pull
+--verify-signatures</span> instead of just <span class=
+"typedText">git pull</span>.</li>
+<li>To verify a given commit <span class="typedText">git log
+--show-signature -1</span></li>
 </ul>
 <h2><a id="tableofkeys">Appendix A: Table of keys</a></h2>
-<center>
 <table border="1" cellspacing="0" cellpadding="10">
 <tr>
 <th>File</th>
@@ -136,7 +139,6 @@ BC35</td>
 <td>DO NOT USE</td>
 </tr>
 </table>
-</center>
 <br>
 <p><a href="#import">Back to step 3 above</a></p>
 <h2>Appendix B: Key Usage</h2>
@@ -166,7 +168,7 @@ purposes not indicated in the above.</li>
 "https://validator.w3.org/check?uri=https://g1257.github.io/keysNoPanel.html"
 title="Valid HTML5">HTML5</a> | <a href=
 "https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/keysNoPanel.html"
-title="This page validates as CSS">CSS</a> | Modified: Jun 15, 2017
+title="This page validates as CSS">CSS</a> | Modified: Sep 7, 2017
 | <a href="#top">Top</a></p>
 </footer>
 </div>
