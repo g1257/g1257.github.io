@@ -1,3 +1,7 @@
+span.typedText {
+	font-family: monospace;
+}
+
 td.myhashes {
         font-family: monospace;
 	line-height: 2em;
