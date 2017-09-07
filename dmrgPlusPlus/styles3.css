@@ -5,7 +5,8 @@
 #header {
 	display: block;
 	height: 50px;
-	background: #0000cc;
+	background: #0000ee;
+	background: linear-gradient(#0000cc, #0000ee);
 }
 
 #nav1 {
@@ -13,6 +14,10 @@
 	background: #0000aa;
 	text-align: center;
 	clear: left;
+	border-style: solid;
+	border-color: #e4d430;
+	border-width: 0px 0px 3px 0px;
+
 }
 
 #nav1 ul:after {
@@ -36,7 +41,7 @@
 }
 
 #nav1 ul li a {
-	display: block; 
+	display: block;
 	padding: 1em 1em;
 	color: #dddddd;
 	text-decoration: none;
