@@ -58,15 +58,6 @@
 	background: #0000ee;
 }
 
-#leftcolumn {
-	min-width: 10%;
-	max-width: 20%;
-	float: left;
-	padding-left: 2em;
-	padding-right: 1em;
-	background: #fafafa;
-}
-
 #contents, #contentsNoPanel {
 	margin: 0 auto;
 	padding-left: 2em;

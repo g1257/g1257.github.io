@@ -3,6 +3,29 @@
 	padding: 5px 10px 5px 0px;
 }
 
+#leftTitle {
+	font-weight: normal;
+	font-size: 1.5em;
+	padding-top: 1em;
+	padding-bottom: 0em;
+	color: #001f3f;
+	text-align: left;
+}
+
+span.firstcharacter {
+  color: #001f3f;
+  float: left;
+  font-size: 50px;
+  line-height: 40px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-left: 2px;
+}
+
+span.startOfParagraph {
+	font-variant: small-caps;
+}
+
 span.typedText {
 	font-family: monospace;
 }
@@ -12,11 +35,6 @@ td.myhashes {
 	line-height: 2em;
         font-size: 1em;
         padding-left: 1em;
-}
-
-h3 {
-	margin-top:2em;
-	margin-bottom: 1em;
 }
 
 .myemph {
@@ -53,9 +71,8 @@ th.horiz {
 
 
 div.memo {
-	background-color: #dddddd;
+	background-color: #fafafa;
 	color: #000000;
-	border: 2px solid #111111;
 	display:block;
 	padding: 10px;
 	margin-bottom: 10px;
@@ -117,9 +134,9 @@ body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldse
 
 body {
 	background:  #ffffff;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	line-height: 25px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	/* font-variant-numeric: oldstyle-nums; */
+	font-size: 100%;
 }
 
 /* unvisited link */
@@ -139,6 +156,11 @@ a:visited {
 	background:  #ffffff;
 }
 
+h3 {
+	margin-top:2em;
+	margin-bottom: 1em;
+}
+
 h2 {
 	font-weight: 600;
 	padding-top: 2em;
@@ -152,11 +174,6 @@ h1 {
 	padding-bottom: 2em;
 	color: #001f3f;
 	text-align: center;
-}
-
-p {
-	font-variant-numeric: oldstyle-nums;
-	font-feature-settings: "onum";
 }
 
 .endofp {
@@ -192,8 +209,15 @@ p {
 .calright {
 	padding-top: 10px;
 	display: block;
-	font-variant-numeric: oldstyle-nums;
-	font-feature-settings: "onum";
+}
+
+#leftcolumn {
+	min-width: 10%;
+	max-width: 20%;
+	float: left;
+	padding-left: 2em;
+	padding-right: 1em;
+	background: #fafafa;
 }
 }
 
