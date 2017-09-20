@@ -1,18 +1,19 @@
 @import url("base.css");
 
-@media only screen {
-
-#header {
-	display: block;
-	height: 50px;
+#logocorner {
+	height: 132px;
 	background: #0074d9;
+	/*background-image: url("images/imageH.png");
+	background-repeat: no-repeat;
+	background-position: center center;*/
+	width: inherit;
 }
 
 #nav1 {
-	margin: 0px auto;
+	height: 72px;
+	padding: 60px 0px 0px 0px;
 	background: #0074d9;
 	text-align: center;
-	clear: left;
 }
 
 #nav1 ul:after {
@@ -79,5 +80,5 @@ footer a:visited {
         color: #dddddd;
 	text-decoration: underline;
 }
-}
+
 
