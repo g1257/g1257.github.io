@@ -1,19 +1,22 @@
 @import url("../base.css");
 
-@media only screen {
-
-#header {
-	display: block;
-	height: 50px;
-	background: #0000ee;
-	background: linear-gradient(#0000cc, #0000ee);
+#logocorner {
+	height: 132px;
+	background: #0000aa;
+	/*background-image: url("images/imageH.png");
+	background-repeat: no-repeat;
+	background-position: center center;*/
+	width: inherit;
+	border-style: solid;
+	border-color: #e4d430;
+	border-width: 0px 0px 3px 0px;
 }
 
 #nav1 {
-	margin: 0px auto;
+	height: 72px;
+	padding: 60px 0px 0px 0px;
 	background: #0000aa;
 	text-align: center;
-	clear: left;
 	border-style: solid;
 	border-color: #e4d430;
 	border-width: 0px 0px 3px 0px;
@@ -84,5 +87,5 @@ footer a:visited {
         color: #000000;
 	text-decoration: underline;
 }
-}
+
 
