@@ -3,6 +3,19 @@
 	padding: 5px 10px 5px 0px;
 }
 
+#leftcolumn {
+	float: left;
+	background: #fafafa;
+	min-width: 10%;
+	max-width: 20%;
+}
+
+#leftcontent {
+	padding-left: 2em;
+	padding-right: 1em;
+	float: left;
+}
+
 #leftTitle {
 	font-weight: normal;
 	font-size: 1.5em;
@@ -98,7 +111,6 @@ span.itemtitle {
 	list-style-type: lower-latin;
 }
 
-@media only screen {
 span.yellow {
 	background-color: #ffff00;
 	color: #000000;
@@ -126,8 +138,6 @@ pre.terminal1 {
 	background: #FF4136;
 }
 
-@media only screen {
-
 body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
 	margin: 0; padding: 0; border: 0;
 }
@@ -154,6 +164,12 @@ a:visited {
 #all1 {
 	width: 100%;
 	background:  #ffffff;
+	max-width: 75em;
+	margin: auto;
+}
+
+h4 {
+	margin-top: 1em;
 }
 
 h3 {
@@ -211,13 +227,23 @@ h1 {
 	display: block;
 }
 
-#leftcolumn {
-	min-width: 10%;
-	max-width: 20%;
-	float: left;
-	padding-left: 2em;
-	padding-right: 1em;
-	background: #fafafa;
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 
+blockquote p {
+  display: inline;
+}

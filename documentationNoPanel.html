@@ -19,7 +19,13 @@
 </head>
 <body>
 <div id="all1">
-<div id="header"></div>
+<div id="leftcolumn">
+<div id="logocorner"></div>
+<div id="leftcontent"><a href=
+"https://g1257.github.io/documentation.html">[+] Show Left
+Panel</a></div>
+<!-- leftcontent --></div>
+<!-- leftcolumn -->
 <div id="nav1">
 <ul>
 <li><a href=
@@ -35,18 +41,140 @@
 </ul>
 </div>
 <!-- nav1 -->
-<div id="leftcolumn"><a href=
-"https://g1257.github.io/documentation.html">[+] Show Left
-Panel</a></div>
-<!-- left column -->
 <div id="contents">
 <h2>Documentation</h2>
-<p>This document is Copyrighted by G.A. and is for personal use
-ONLY. <a href="doc.pdf">doc.pdf</a>. Latest version is December 10,
-2014. Please make sure you have the LATEST version, as it can
-change.</p>
+<div class="memo">
+<p>Make sure you have the latest version of this memo.</p>
+<p>Version Date: <b>September 22, 2016</b>.</p>
+<p>Type of Memo: Informative</p>
+</div>
+<h3>The Problem</h3>
+<p>I like documentation that reads like a story. Like, you
+know,</p>
+<blockquote>Once upon a time there was a nice smart brave C++ class
+called Minimizer who set out on a journey to find ...</blockquote>
+<p>Although, Minimizer will always be nice, smart and brave, other
+parts of its documentation might change with time. So the problem
+becomes that such documentation would be written separately from
+the code, and (i) will become out-of-date pretty soon, and (ii)
+will be tedious to maintain in sync with what the code actually
+does.</p>
+<p>So, Knuth (of TeX fame) suggested Literate Programming, that is,
+writing a <span class="typedText">.w</span> file in human format
+and then getting from it two files: one for the code and one for
+the documentation. Apart from having the documentation tied to the
+code, the advantage here is that one can develop a story for the
+documentation. The disadvantage with this, though, is that tools
+(IDE, debugger, valgrind) don't understand <span class=
+"typedText">.w</span> files.</p>
+<p>On the other hand, we have things like <span class=
+"typedText">doxygen</span> where one is supposed to write
+documentation in the code as comments and then one is supposed to
+extract said documentation from the code. The advantage is that now
+files like <span class="typedText">.h</span> and <span class=
+"typedText">.cpp</span> are the usual ones and all tools understand
+them. The problem, though, is that doygen will produce an API-like
+or library-like documentation, which doesn't fit a storyline
+documentation.</p>
+<h3>The Solution</h3>
+One writes one's story in file, say, <span class=
+"typedText">manual.ptex</span>, like
+<pre class="terminal1">
+Once upon a time there was a nice smart brave C++ class
+called Minimizer who set out on a journey to find
+the minimum of a function for a given range and
+maximum number of iterations. This class takes two
+template arguments RealType and FunctionType.
+
+Its member function simplex is the one that actually
+performs the minimization using the simplex method,
+by setting its first argument with the vector that
+minimizes the function. The other arguments are the
+delta and the tolerance.
+</pre>
+<p>Now to simplify keeping documentation and code in sync, what
+needs to be said about class <span class=
+"typedText">Minimizer</span> better be said in class <span class=
+"typedText">Minimizer</span>, and, likewise, what needs to be said
+about function <span class="typedText">simplex</span> better be
+said near that function as well, as shown in this listing.</p>
+<pre class="terminal1">
+/* PSIDOC Minimizer
+find the minimum of a function for a given range and
+maximum number of iterations. This class takes two
+template arguments RealType and FunctionType.
+*/
+template&lt;typename RealType,typename FunctionType&gt;
+class Minimizer {
+
+...
+        /* PSIDOC MinimizerSimplex
+            performs the minimization using the simplex method,
+            by setting its first argument with the vector that
+            minimizes the function. The other arguments are the
+            delta and the tolerance. */
+        int simplex(VectorType& minVector,
+                    RealType delta=1e-3,
+                    RealType tolerance=1e-3)
+        {
+                ...
+        }
+};
+</pre>
+<p>So, now the storyline can use hooks to the embedded code,
+like</p>
+<pre class="terminal1">
+Once upon a time there was a nice smart brave C++ class
+called Minimizer who set out on a journey to
+\ptexPaste{Minimizer}
+
+Its member function simplex actually
+\ptexPaste{MinimizerSimplex}
+</pre>
+<p>Now, putting it all together the recipe for writing and
+extracting documentation is</p>
+<ol>
+<li>Write a story line using standard <span class=
+"typedText">LaTeX</span> markdown into one <span class=
+"typedText">manual.ptex</span> file. Use <span class=
+"typedText">ptexPaste</span> to bring documentation from the code
+into the story.</li>
+<li>Write the embedded documentation as C++ comments with
+<span class="typedText">LaTeX</span> markdown in the code near the
+classes and functions, etc.</li>
+<li>Run the <span class="typedText">doc.pl</span> script to create
+a <span class="typedText">.tex</span> file from a <span class=
+"typedText">.ptex</span> one.
+<div class="typedText">
+<pre>
+cd dmrgpp/doc
+find ../src -iname "*.h" -or -iname "*.cpp" |
+perl ../../PsimagLite/scripts/doc.pl manual.ptex
+</pre></div>
+that will produce <span class="typedText">manual.tex</span>.</li>
+<li>Run <span class="typedText">pdflatex manual.tex</span> to
+obtain <span class="typedText">manual.pdf</span>.</li>
+</ol>
+<h3>Notes</h3>
+<p>Here are further things I wanted to say but would have
+distracted from the main points.</p>
+<ol>
+<li>Knuth's weaving and tangling (or tangling and weaving) would
+have worked without modification had the tools implemented the
+understanding of, say, a <span class="typedText">.w</span> file.
+So, in no way is this writing a criticism of Knuth's idea—and I am
+using <span class="typedText">TeX</span>.</li>
+<li>Compare library-like documentation <a href=
+"https://doc.cgal.org/4.2/CGAL.CGAL/html/annotated.html">like
+this</a> with story-like documentation <a href=
+"https://doc.cgal.org/4.2/CGAL.CGAL/html/introduction.html">like
+this</a>.</li>
+<li>An excellent example of story-like documentation produced with
+<span class="typedText">doxygen</span> is the whole book <a href=
+"https://github.com/mmp/pbrt-v3/">Physically Based Rendering</a>,
+Second Edition: From Theory To Implementation</li>
+</ol>
 <div class="final"></div>
-<div class="articlesep"></div>
 </div>
 <!-- contents ends -->
 <footer>
@@ -55,7 +183,7 @@ change.</p>
 "https://validator.w3.org/check?uri=https://g1257.github.io/documentationNoPanel.html"
 title="Valid HTML5">HTML5</a> | <a href=
 "https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/documentationNoPanel.html"
-title="This page validates as CSS">CSS</a> | Modified: Sep 7, 2017
+title="This page validates as CSS">CSS</a> | Modified: Sep 20, 2017
 | <a href="#top">Top</a></p>
 </footer>
 </div>
