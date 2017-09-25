@@ -2,7 +2,7 @@
 
 #logocorner {
 	height: 132px;
-	background: #0074d9;
+	background: #e0f2ff;
 	/*background-image: url("images/imageH.png");
 	background-repeat: no-repeat;
 	background-position: center center;*/
@@ -11,8 +11,8 @@
 
 #nav1 {
 	height: 72px;
-	padding: 60px 0 0 0;
-	background: #0074d9;
+	padding: 60px 0px 0px 0px;
+	background: #e0f2ff;
 	text-align: center;
 }
 
@@ -23,7 +23,7 @@
 }
 
 #nav1 ul {
-	background: #0074d9;
+	background: #e0f2ff;
 	padding: 0 1em;
 	list-style: none;
 	position: relative;
@@ -36,25 +36,24 @@
 }
 
 #nav1 ul li a {
-	display: block; 
+	display: block;
 	padding: 1em 1em;
-	color: #dddddd;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 22px;
 }
 
 #nav1 ul li a:hover {
-	background: #69a5ff;
+	background: #80c6ff;
 	color: #ffffff;
 }
 
 #activeItem {
 	color: #ffffff;
-	background: #69a5ff;
+	background: #80c6ff;
 }
 
-#contents, #contentsNoPanel {
+#contents {
 	margin: 0 auto;
 	padding-left: 2em;
 	padding-bottom: 2em;
@@ -70,15 +69,4 @@ footer {
 	background: #ffffff;
 	color: #000000;
 }
-
-footer a:link {
-        color: #000000;
-	text-decoration: underline;
-}
-
-footer a:visited {
-        color: #dddddd;
-	text-decoration: underline;
-}
-
 
