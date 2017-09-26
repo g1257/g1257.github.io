@@ -1,15 +1,12 @@
 @import url("../base.css");
 
 #logocorner {
-	height: 132px;
-	background: #0000aa;
+	height: 64px;
+	background: #fafafa;
 	/*background-image: url("images/imageH.png");
 	background-repeat: no-repeat;
 	background-position: center center;*/
 	width: inherit;
-	border-style: solid;
-	border-color: #e4d430;
-	border-width: 0 0 3px 0;
 }
 
 #nav1 {
