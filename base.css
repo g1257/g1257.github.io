@@ -20,7 +20,7 @@
 	font-weight: normal;
 	font-size: 1.5em;
 	padding-top: 1em;
-	padding-bottom: 0em;
+	padding-bottom: 0;
 	color: #111111;
 	text-align: left;
 }
@@ -128,7 +128,6 @@ pre.terminal1 {
 	font-size: 12pt;
 	line-height:30px;
 }
-}
 
 .greenok {
 	background: #2ECC40;
@@ -138,7 +137,7 @@ pre.terminal1 {
 	background: #FF4136;
 }
 
-body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+body, div, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
 	margin: 0; padding: 0; border: 0;
 }
 
