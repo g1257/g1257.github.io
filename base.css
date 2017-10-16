@@ -117,6 +117,12 @@ span.yellow {
 	font-weight: bold;
 }
 
+div.yellow {
+	background-color: #e4d430;
+	color: #000000;
+	font-weight: bold;
+}
+
 pre.terminal1 {
 	padding:10px 10px 10px 23px;
 	background-color: #fafafa;
