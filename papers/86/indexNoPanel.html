@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.4.0">
+<meta charset="utf-8">
+<meta name="keywords" content="condensed matter theory">
+<meta name="description" content="condensed matter theory">
+<meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
+<link href="../../styles3.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title=
+"Gonzalo Alvarez Website RSS Feed" href=
+"https://g1257.github.io/rss/website.xml">
+<link rel="alternate" type="application/rss+xml" title=
+"Gonzalo Alvarez Computer Codes RSS Feed" href=
+"https://g1257.github.io/rss/codes.xml">
+<title>Supplemental_For_Paper_68</title>
+</head>
+<body>
+<div id="all1">
+<div id="nav1">
+<ul>
+<li><a href=
+"https://g1257.github.io/indexNoPanel.html">Home</a></li>
+<li><a href=
+"https://g1257.github.io/resumeNoPanel.html">Resume</a></li>
+<li><a href=
+"https://g1257.github.io/softwareNoPanel.html">Software</a></li>
+<li><a href=
+"https://g1257.github.io/memorandaNoPanel.html">Memoranda</a></li>
+<li><a href=
+"https://g1257.github.io/resourcesNoPanel.html">Resources</a></li>
+</ul>
+</div>
+<!-- nav1 -->
+<div class="showPlus"><a href=
+"https://g1257.github.io/papers/68/index.html">[+] Show Left
+Panel</a></div>
+<!-- showPlus -->
+<div id="contents">
+<h2>Paper 86</h2>
+<p><em>Orbital and Charge Excitations as Fingerprints of an
+Orbital-Selective Mott Phase in the Block Magnetic State of
+BaFe<sub>2</sub>Se<sub>3</sub></em>,</p>
+N. D. Patel, A. Nocera, G. Alvarez, A. Moreo, S. Johnston, and E.
+Dagotto, <a href=
+"https://arxiv.org">ArXiv:XXXX.<b>XXXXX</b>(XXXX)</a>.
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+<th>Item</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+<p><a href="AGS.inp">A(k,w) groundstate</a></p>
+<p><a href="E_Akw_a.inp">Electron: A(k,w) orbital-a</a></p>
+<p><a href="H_Akw_a.inp">Hole: A(k,w) orbital-a</a></p>
+<p><a href="c.txt">c local operator</a></p>
+<p><a href="cd.txt">cdagger local operator</a></p>
+</td>
+<td>July 28, 2018</td>
+<td>
+<p>Figure 2a: sample inputs for orbital resolved A(k,w) for orbital
+a. Orbitals 'b' and 'c' counterparts can also be done
+similarly.</p>
+<p>Step 1 - Running ground-state: ./dmrg -f AGS.inp -p 12
+"nup?0,ndown?0,n?0"</p>
+<p>Step 2 - Calculating ground-state observables: ./observe -f
+AGS.inp onepoint,ss,nn</p>
+<p>Step 3 - Calculating Electron Aa(k,w): ./dmrg -f E_Akw_a.inp
+':cd.txt,:c.txt'</p>
+<p>Step 4 - Calculating Hole Aa(k,w): ./dmrg -f H_Akw_a.inp
+':cd.txt,:c.txt'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="AGS.inp">N(k,w) groundstate</a></p>
+<p><a href="Nkw_a.inp">N(k,w) orbital-a</a></p>
+<p><a href="n.txt">n local operator</a></p>
+</td>
+<td>July 28, 2018</td>
+<td>
+<p>Figure 2c: sample inputs for orbital resolved N(k,w) for orbital
+a.</p>
+<p>Step 1 - Running ground-state: ./dmrg -f AGS.inp -p 12
+"nup?0,ndown?0,n?0"</p>
+<p>Step 2 - Calculating ground-state observables: ./observe -f
+AGS.inp onepoint</p>
+<p>Step 3 - Using the ground-state local density (&lt;n_i&gt;)
+calculated by step 2, for each site, define operator n_i -
+&lt;n_i&gt; (filename: n$i.txt where $i is the site label)</p>
+<p>Step 4 - Calculating Na(k,w): ./dmrg -f Nkw_a.inp -p 12
+':n$.txt'</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="LGS.inp">Lx(k,w) groundstate</a></p>
+<p><a href="Lkw_x.inp">Lx(k,w) orbital-a</a></p>
+<p><a href="Lx.txt">Lx local operator</a></p>
+<p><a href="Ly.txt">Ly local operator</a></p>
+<p><a href="Lz.txt">Lz local operator</a></p>
+</td>
+<td>July 28, 2018</td>
+<td>
+<p>Figure 2e: sample inputs for Lx(k,w). The Ly and Lz counterparts
+can also be done similarly.</p>
+<p>Step 1 - Running ground-state: ./dmrg -f LGS.inp -p 12</p>
+<p>Step 2 - Calculating Lx(k,w): ./dmrg -f Lkw_x.inp -p 12
+':Lx.txt,:Ly.txt,:Lz.txt'</p>
+</td>
+</tr>
+</table>
+<article>Note that in each dynamical run input file, there is a
+local operator provided that looks like<br>
+----------------------------<br>
+TSPOperator=raw<br>
+RAW_MATRIX<br>
+4 4<br>
+0 0 0 0<br>
+1 0 0 0<br>
+1 0 0 0<br>
+0 1 -1 0<br>
+FERMIONSIGN=-1<br>
+JMVALUES 1 1<br>
+AngularFactor=1<br>
+----------------------------<br>
+DMRG++ engine apply this operator onto the the ground-state and the
+operators that are given in the command-line arguement are measured
+(For example, in command ``./dmrg -f H_Akw_a.inp
+':cd.txt,:c.txt''', the cdagger and c operators are measured
+in-situ). Therefore, when calculating different spectral function,
+one must add the correct operator in the inputfile and give the
+correct operator for the measurement.<br>
+<br>
+CorrectionVectorEta=0.08<br>
+CorrectionVectorOmega=3.000<br>
+<br>
+Above lines are used in the input file to specify the broadening η
+and a specific energy transfer ω of a spectral function. These can
+be changed by the user. Additionally, below lines are used the
+specify `apply operator at site 36 in loop 0'.<br>
+<br>
+TSPSites 1 36<br>
+TSPLoops 1 0<br>
+<br>
+For additional help, please consider the DMRG++ manual.</article>
+<br>
+<br>
+<div class="final"></div>
+</div>
+<!-- contents ends -->
+<footer>
+<p><a href="https://g1257.github.io/">G. Alvarez</a> © 2017.
+<a href="https://g1257.github.io/other.html">Meta</a> | <a href=
+"https://validator.w3.org/check?uri=https://g1257.github.io/papers/68/indexNoPanel.html"
+title="Valid HTML5">HTML5</a> | <a href=
+"https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/papers/68/indexNoPanel.html"
+title="This page validates as CSS">CSS</a> | Modified: Jun 28, 2018
+| <a href="#top">Top</a></p>
+</footer>
+</div>
+<!-- all1 -->
+</body>
+</html>
