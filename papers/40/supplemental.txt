@@ -34,9 +34,9 @@ potentialV  16  -0.5 -0.5 -0.5 -0.5     -0.5 -0.5 -0.5 -0.5
                 -0.5 -0.5 -0.5 -0.5     -0.5 -0.5 -0.5 -0.5
 
 Model=HubbardOneBand
-SolverOptions=MettsTargetting
+SolverOptions=MettsTargeting
 Version=version
-OutputFile=data.txt
+OutputFile=data
 InfiniteLoopKeptStates=200
 FiniteLoops 4
                    3 200 0 -3 200 0 -3 200 0 3 200 0
@@ -92,9 +92,9 @@ potentialV  40     1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6
                    1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6 1.6
 
 Model=HubbardOneBand
-SolverOptions=MettsTargetting
+SolverOptions=MettsTargeting
 Version=version
-OutputFile=data.txt
+OutputFile=data
 InfiniteLoopKeptStates=200
 FiniteLoops 7
                    9 200 0 -9 200 0 -9 200 0  9 200 1

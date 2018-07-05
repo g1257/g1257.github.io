@@ -47,10 +47,10 @@ potentialV 120
 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8
-SolverOptions=CorrectionTargetting
+SolverOptions=CorrectionTargeting
 CorrectionA=0.0005
 Version=Version
-OutputFile=data340.txt
+OutputFile=data340
 InfiniteLoopKeptStates=150
 FiniteLoops 33
 9 300 0 -9 300 0 -9 300 0 9 300 0
@@ -89,10 +89,10 @@ potentialV 132
 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1 -0.1
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8 0.8
-SolverOptions=CorrectionTargetting
+SolverOptions=CorrectionTargeting
 CorrectionA=0.0005
 Version=Version
-OutputFile=data340.txt
+OutputFile=data340
 InfiniteLoopKeptStates=150
 FiniteLoops 33
 10 300 0 -10 300 0 -10 300 0 10 300 0
@@ -104,7 +104,8 @@ FiniteLoops 33
 10 300 0 -10 300 0 -10 300 0 10 300 0
 10 300 0 -10 300 0 -10 300 0 10 300 1
 10 300 1
-TargetQuantumNumbers 3 2 2 0.0
+TargetElectronsUp=2
+TargetElectronsDown=2
 Threads=8
 
 ******************************************************************************************************************
@@ -131,10 +132,10 @@ potentialV 144
 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5
 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
-SolverOptions=CorrectionTargetting
+SolverOptions=CorrectionTargeting
 CorrectionA=0.0005
 Version=Version
-OutputFile=data340.txt
+OutputFile=data340
 InfiniteLoopKeptStates=150
 FiniteLoops 37
 11 300 0 -11 300 0 -11 300 0 11 300 0
@@ -147,7 +148,8 @@ FiniteLoops 37
 11 300 0 -11 300 0 -11 300 0 11 300 0
 11 300 0 -11 300 0 -11 300 0 11 300 1
 11 300 1
-TargetQuantumNumbers 3 2 2 0.0
+TargetElectronsUp=2
+TargetElectronsDown=2
 Threads=16
 
 ******************************************************************************************************************
