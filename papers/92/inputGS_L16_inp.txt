@@ -1,0 +1,46 @@
+TotalNumberOfSites=16
+NumberOfTerms=1
+DegreesOfFreedom=3
+GeometryKind=chain
+GeometryOptions=ConstantValues
+Connectors 3 3
+-0.5 0.0 0.0
+0.0 -0.5 0.0
+0.0 0.0 -0.5
+Model=FeAsBasedSc
+FeAsMode=INT_PAPER33
+Orbitals=3
+hubbardU 5 VALUE_OF_PAR1 VALUE_OF_PAR2 VALUE_OF_PAR3 VALUE_OF_PAR4 VALUE_OF_PAR5
+potentialV 96
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+SpinOrbit 4 9
+(0,0) (0,0) (0,0) (0,0) (0,0) (0,-VALUE_of_LAMBDA) (0,0) (0,VALUE_of_LAMBDA) (0,0)
+(0,0) (0,-VALUE_of_LAMBDA) (VALUE_of_LAMBDA,0) (0,VALUE_of_LAMBDA) (0,0) (0,0) (-VALUE_of_LAMBDA,0) (0,0) (0,0)
+(0,0) (0,-VALUE_of_LAMBDA) (-VALUE_of_LAMBDA,0) (0,VALUE_of_LAMBDA) (0,0) (0,0) (VALUE_of_LAMBDA,0) (0,0) (0,0)
+(0,0) (0,0) (0,0) (0,0) (0,0) (0,VALUE_of_LAMBDA) (0,0) (0,-VALUE_of_LAMBDA) (0,0)
+TargetElectronsTotal=VALUE_OF_N
+TargetSzPlusConst=VALUE_OF_Jz
+JzSymmetry=1
+CorrectionA=0.008
+SolverOptions=CorrectionTargeting,useComplex,vectorwithoffsets
+Version=version
+OutputFile=data
+AdjustQuantumNumbers 12 L4_Jz 14 L6_Jz 21 L8_Jz 28 L10_Jz 35 L12_Jz 42 L14_Jz 49
+InfiniteLoopKeptStates=200
+FiniteLoops 31
+7 300 0 -14 350 0 14 400 0 -14 400 0
+14 400 0 -14 500 0 14 500 0 -14 500 0
+14 600 0 -14 600 0 14 600 0 -14 600 0
+14 600 0 -14 600 0 14 600 0 -14 700 0
+14 700 0 -14 700 0 14 700 0 -14 800 0
+14 800 0 -14 800 0 14 800 0 -14 800 0
+14 800 0 -14 800 0 14 800 0 -14 800 0
+14 800 0 -14 800 0 14 800 1
+LanczosEps=1e-7
+LanczosSteps=300
+Threads=NO_OF_THREADS
