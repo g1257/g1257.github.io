@@ -44,7 +44,30 @@ Panel</a></div>
 three-orbital Hubbard model with spin-orbit coupling in one
 dimension,</em> by N. Kaushal, J. Herbrych, A. Nocera, G. Alvarez,
 A. Moreo, F. A. Reboredo, and E. Dagotto, Phys. Rev. B 96,
-155111(2017) ADD SUPPLEMENTAL INFO HERE</p>
+155111(2017)</p>
+<p>Input for (1) : dmrgpp/TestSuite/inputs/input5800.inp Please use
+SolverOptions=fixLegacyBugs,useComplex for this paper. Nitin says
+<q>I also checked Dynamics for SOC model with DMRG++ and my
+lanczos, they are on top of each other.</q>. For 1-point
+obervable:</p>
+<pre>
+./observe -f input.inp "&lt;gs|A|gs&gt;"
+</pre>
+<p>For 2-point observable,</p>
+<pre>
+ ./observe -f input.inp "&lt;gs|A;B|gs&gt;"
+</pre>
+<p>If you are doing dynamics, measure "&lt;gs|A_{i} (1/H-EG
++i*eta)B_{c}|gs&gt;", where B acts on central site and A is
+measured on all sites <i>i</i>. <b>Very important to use
+fixLegacyBugs here!</b></p>
+<p>Nitin says</p>
+<blockquote>If in case you need to put these bash files and small
+scripts to create all the weird operators (Like Lz,Lx,Ly, Delta,
+Delta_dagger, n<sub>{j,m}</sub>) which I use SOC projects. These
+files create the 64x64 matrices, which I use to measure various
+physical quantities.</blockquote>
+<p>NEED TO ADD INFO FOR THIS PART.</p>
 <div class="final"></div>
 </div>
 <!-- contents ends -->
@@ -54,7 +77,7 @@ A. Moreo, F. A. Reboredo, and E. Dagotto, Phys. Rev. B 96,
 "https://validator.w3.org/check?uri=https://g1257.github.io/papers/77/indexNoPanel.html"
 title="Valid HTML5">HTML5</a> | <a href=
 "https://jigsaw.w3.org/css-validator/check?uri=https://g1257.github.io/papers/77/indexNoPanel.html"
-title="This page validates as CSS">CSS</a> | Modified: Jan 16, 2019
+title="This page validates as CSS">CSS</a> | Modified: Feb 4, 2019
 | <a href="#top">Top</a></p>
 </footer>
 </div>
