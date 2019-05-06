@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{gonza}
+\lfoot{\textcolor{gray2}{Copyright by G.A.}}
+
+\lstset{language=c++,basicstyle=\footnotesize\ttfamily,
+keywordstyle=\color{blue}\bfseries,frame=shadowbox}
+\begin{document}
+\title{Scientific Memos}
+\author{G.A.}
+\maketitle
+
+\noindent
+
+\section{Charge Gap}
+\begin{equation}
+C(N, N_e) \equiv E(N, N_e+1) + E(N, N_e-1) - 2 E(N, N_e),
+\end{equation}
+where $N_e$ is the number of electrons and $N$ the number of atoms.
+Because the energy has to be extensive, we have
+$E(N, N_e)=N\,e(N_e/N)$, where $e$ is an intensive function.
+We take the limit of $N\rightarrow\infty$ with $N_e/N=n$ constant.
+Therefore, \emph{as long as e'' exists}  \framebox{$C(N, N_e) \rightarrow e''(n)/N$.}
+
+\section{Spin Gap}
+\begin{equation}
+S(N, N_\uparrow, N_\downarrow) \equiv (E(N, N_\uparrow+1, N_\downarrow-1) 
++E(N, N_\uparrow-1, N_\downarrow+1))/2 - E(N, N_\uparrow, N_\downarrow)
+\end{equation}
+where $N_\uparrow$ ($N_\downarrow$) is the number of electrons up (down) and $N$ the number of atoms.
+Because the energy has to be extensive, we have
+$E(N, N_\uparrow, N_\downarrow)=N\,e(n_\uparrow, n_\downarrow)$, where $e$ is an intensive function.
+We take the limit of $N\rightarrow\infty$ with $N_\uparrow/N=n_\uparrow$ constant, and similar for $N_\downarrow$.
+Therefore, \emph{as long as e'' exists}  \framebox{$S(N, N_e) \propto 1/N$.}
+
+
+\section{The Binding Energy}
+By definition, the binding energy
+\begin{equation}
+B(N, N_e) \equiv E(N, N_e+2) + E(N, N_e) - 2 E(N, N_e-1),
+\end{equation}
+where $N_e$ is the number of electrons and $N$ the number of atoms.
+Therefore, \emph{as long as e'' exists}
+\begin{equation}
+E(N, N_e+2) = Ne(N_e/N + 2/N)=N\left[e(n_0)+\frac{2}{N}e'(n_0) + \left(\frac{2}{N}\right)^2e''(n_0)/2+\cdots\right],
+\end{equation}
+where $n_0\equiv N_e/N$. Finally \framebox{$B(N, N_e) = e''(n_0)/N$.}
+
+\end{document}
+
