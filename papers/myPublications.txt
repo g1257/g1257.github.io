@@ -3,6 +3,16 @@ author="Nitin Kaushal and  Rahul Soni and  Alberto Nocera and  Gonzalo Alvarez a
 note="arXiv:2002.07351 (2020) BCS-BEC crossover in a $(t_2g)^4$ Excitonic Magnet"
 }
 
+@unpublished{re:2001.00589,
+author="Niravkumar D. Patel and  Nitin Kaushal and  Alberto Nocera and  Gonzalo Alvarez and  Elbio Dagotto",
+note="arXiv:2001.00589 Resonant Valence Bond States: Emergence of Superconductivity in Doped Multiorbital Chains"
+}
+
+@unpublished{re:1911.12248,
+author="J. Herbrych and  J. Heverhagen and  G. Alvarez and  M. Daghofer and  A. Moreo and  E. Dagotto",
+note="arXiv:1911.12248 Block-Spiral Magnetism: A New Type of Frustrated Order"
+}
+
 @article{re:10.1007/978-3-030-28596-8_20,
 author="J. Criado and  M. Garcia and  J. Labarta and  A. Chatterjee and    O. Hernandez and  G. Alvarez",
 title="Optimization of Condensed Matter Physics Application with OpenMP Tasking Model",
