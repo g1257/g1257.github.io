@@ -1,21 +1,192 @@
-@unpublished{re:arXiv:2002.07351,
+@article{re:http://arxiv.org/abs/2304.11154v2,
+author="A. Jażdżewska and  M. Mierzejewski and  M. Środa and  A. Nocera and  G. Alvarez and  E. Dagotto and  J. Herbrych",
+title="Transition to the Haldane phase driven by electron-electron correlations",
+journal="Nat. Commun.",
+volume="14",
+pages="8524",
+year="2023"}
+
+@unpublished{re:http://arxiv.org/abs/2311.13440v1,
+author="Pontus Laurell and  Jacek Herbrych and  Gonzalo Alvarez and  Elbio Dagotto",
+note="arXiv:2311.13440 Luther-Emery liquid and dominant singlet superconductivity in the two-orbital Hubbard chain"
+}
+
+@article{re:http://arxiv.org/abs/2210.11209v3,
+author="M. Środa and  J. Mravlje and  G. Alvarez and  E. Dagotto and  J. Herbrych",
+title="Hund bands in spectra of multiorbital systems",
+journal="Phys. Rev. B",
+volume="108",
+pages="L081102",
+year="2023"}
+
+@article{re:http://arxiv.org/abs/2303.08324v1,
+author="Ling-Fang Lin and  Yang Zhang and  Gonzalo Alvarez and  Michael A. McGuire and  Andrew F. May and  Adriana Moreo and  Elbio Dagotto",
+title="Stability of the novel interorbital-hopping mechanism for ferromagnetism in multi-orbital Hubbard models",
+journal="Phys. Rev. B",
+volume="107",
+pages="104414",
+year="2023"}
+
+@unpublished{re:http://arxiv.org/abs/2303.08203v1,
+author="Gonzalo Alvarez and  Ryan Bennink and  Stephan Irle and  Jacek Jakowski",
+note="arXiv:2303.08203 Gene Expression Programming for Quantum Computing"
+}
+
+@article{re:http://arxiv.org/abs/2203.06332v4,
+author="Pontus Laurell and  Allen Scheie and  D. Alan Tennant and  Satoshi Okamoto and  Gonzalo Alvarez and  Elbio Dagotto",
+title="Magnetic excitations, non-classicality and quantum wake spin dynamics in the Hubbard chain",
+journal="Phys. Rev. B",
+volume="106",
+pages="085110",
+year="2022"}
+
+@article{re:http://arxiv.org/abs/2203.00060v2,
+author="Yang Zhang and  Ling-Fang Lin and  Adriana Moreo and  Thomas A. Maier and  Gonzalo Alvarez and  Elbio Dagotto",
+title="Strongly anisotropic electronic and magnetic structures in oxide dichlorides RuOCl$_2$ and OsOCl$_2$",
+journal="Phys. Rev. B",
+volume="105",
+pages="174410",
+year="2022"}
+
+@article{re:http://arxiv.org/abs/2204.01688v1,
+author="Ling-Fang Lin and  Rahul Soni and  Yang Zhang and  Shang Gao and  Adriana Moreo and  Gonzalo Alvarez and  Andrew D. Christianson and  Matthew B. Stone and  Elbio Dagotto",
+title="Electronic structure, magnetic properties and pairing tendencies of the copper-based honeycomb lattice Na$_2$Cu$_2$TeO$_6$",
+journal="Phys. Rev. B",
+volume="105",
+pages="245113",
+year="2022"}
+
+@article{re:PhysRevB.106.085110,
+author="Pontus Laurell and Allen Scheie and D. Alan Tennant and Satoshi Okamoto and Gonzalo Alvarez and Elbio Dagotto and  Elbio",
+title="Magnetic excitations, nonclassicality, and quantum wake spin dynamics in the Hubbard chain",
+journal="Phys. Rev. B",
+volume="106",
+pages="085110",
+year="2022"}
+
+@article{re:PhysRevB.105.014435,
+author="Shi Feng and Gonzalo Alvarez and Nandini Trivedi",
+title="Gapless to gapless phase transitions in quantum spin chains",
+journal="Phys. Rev. B",
+volume="105",
+pages="014435",
+year="2022"}
+
+@article{re:PhysRevB.103.L121114,
+author="Yang Zhang and Ling-Fang Lin and Adriana Moreo and Gonzalo Alvarez and Elbio Dagotto",
+title="Peierls transition, ferroelectricity, and spin-singlet formation in the monolayer VOI2",
+journal="Phys. Rev. B",
+volume="103",
+pages="121114",
+year="2021"}
+
+@article{re:PhysRevLett.127.077204,
+author="Ling-Fang Lin and Yang Zhang and Gonzalo Alvarez and Adriana Moreo and Elbio Dagotto",
+title="Origin of insulating ferromagnetism in iron oxychalcogenide Ce2O2FeSe2",
+journal="Phys. Rev. Lett.",
+volume="127",
+pages="077204",
+year="2021"}
+
+@article{re:PhysRevB.104.125122,
+author="Yang Zhang and Ling-Fang Lin and Gonzalo Alvarez and Adriana Moreo and Elbio Dagotto",
+title="Magnetic states of quasi-one-dimensional iron chalcogenide Ba2FeS2",
+journal="Phys. Rev. B",
+volume="104",
+pages="125122",
+year="2021"}
+
+@article{re:PhysRevB.103.214513,
+author="Bradraj Pandey and Rahul Soni and Ling-Fang Lin and Gonzalo Alvarez and Elbio Dagotto",
+title="Intertwined charge, spin, and pairing orders in doped iron ladders",
+journal="Phys Rev. B",
+volume="103",
+pages="214513",
+year="2021"}
+
+@article{re:2102.08376,
+author="A. Scheie and Pontus Laurell and A. M. Samarakoon and B. Lake and S. E. Nagler and G. E. Granroth and S. Okamoto and G. Alvarez and D. A. Tennant",
+title="Witnessing entanglement in quantum magnets using neutron scattering",
+journal="Phys Rev. B",
+volume="103",
+pages="224434",
+year="2021"}
+
+@article{re:2011.05646,
+author="J. Herbrych and  M. Środa and  G. Alvarez and  M. Mierzejewski and  E. Dagotto",
+title="Interaction-induced topological phase transition and Majorana edge states in low-dimensional orbital-selective Mott insulators",
+journal="Nature Communications",
+volume="12",
+pages="2955",
+year="2021"}
+
+@article{re:PhysRevResearch.3.033273,
+author="Tom Berlijn and  Gonzalo Alvarez and  David S. Parker and  Rapha�l P. Hermann and  Randy S. Fishman",
+title="Simulating Spin Waves in Entropy Stabilized Oxides",
+journal="Phys. Rev. Research",
+volume="3",
+pages="033273",
+year="2021"}
+
+@article{re:PhysRevLett.127.037201,
+author="Pontus Laurell and  Allen Scheie and  Chiron J. Mukherjee and  Michael M. Koza and  Mechtild Enderle and Zbigniew Tylczynski and  Satoshi Okamoto and  Radu Coldea and  D. Alan Tennant and  Gonzalo Alvarez",
+title="Dynamics, Entanglement, and the Classical Point in the Transverse-Field XXZ ChainCs_2CoCl_4",
+journal="Phys. Rev. Lett.",
+volume="127",
+pages="037201",
+year="2021"}
+
+@article{re:PhysRevB.103.045115,
+author="Bradraj Pandey and  Yang Zhang and  Nitin Kaushal and  Rahul Soni and  Ling-Fang Lin and  Wen-Jun Hu and  Gonzalo Alvarez and  Elbio Dagotto",
+title="Origin of the Magnetic and Orbital ordering in α-Sr_2CrO_4",
+journal="Phys. Rev. B",
+volume="103",
+pages="045115",
+year="2021"}
+
+@article{re:PhysRevB.102.115134,
+author="J. Herbrych and  G. Alvarez and  A. Moreo and  E. Dagotto",
+title="Block orbital-selective Mott insulators: a spin excitation analysis",
+journal="Phys. Rev. B",
+volume="102",
+pages="115134",
+year="2020"}
+
+@article{re:2005.13132,
+author="Bradraj Pandey and  Ling-Fang Lin and  Rahul Soni and  Nitin Kaushal and  Jacek Herbrych and  Gonzalo Alvarez and  Elbio Dagotto",
+title="Prediction of exotic magnetic states in the alkali metal quasi-one-dimensional iron selenide compound Na$_2$FeSe$_2$",
+journal="Phys Rev. B",
+volume="102",
+pages="035149",
+year="2020"}
+
+@article{re:PhysRevB.101.245147,
 author="Nitin Kaushal and  Rahul Soni and  Alberto Nocera and  Gonzalo Alvarez and  Elbio Dagotto",
-note="arXiv:2002.07351 (2020) BCS-BEC crossover in a $(t_2g)^4$ Excitonic Magnet"
-}
+title="BCS-BEC crossover in a $(t_2g)^4$ Excitonic Magnet",
+journal="Phys. Rev. B",
+volume="101",
+pages="245147",
+year="2020"}
 
-@unpublished{re:2001.00589,
+@article{re:2001.00589,
 author="Niravkumar D. Patel and  Nitin Kaushal and  Alberto Nocera and  Gonzalo Alvarez and  Elbio Dagotto",
-note="arXiv:2001.00589 Resonant Valence Bond States: Emergence of Superconductivity in Doped Multiorbital Chains"
-}
+title="Resonant Valence Bond States: Emergence of Superconductivity in Doped Multiorbital Chains",
+journal="NPJ Quantum Mater.",
+volume="5",
+pages="27",
+year="2020"}
 
-@unpublished{re:1911.12248,
+@article{re:1911.12248,
 author="J. Herbrych and  J. Heverhagen and  G. Alvarez and  M. Daghofer and  A. Moreo and  E. Dagotto",
-note="arXiv:1911.12248 Block-Spiral Magnetism: A New Type of Frustrated Order"
-}
+title="Block-Spiral Magnetism: A New Type of Frustrated Order",
+journal="Proc. Natl Acad. Sci. USA",
+volume="117",
+pages="16226",
+year="2020"}
 
 @article{re:10.1007/978-3-030-28596-8_20,
-author="J. Criado and  M. Garcia and  J. Labarta and  A. Chatterjee and    O. Hernandez and  G. Alvarez",
-title="Optimization of Condensed Matter Physics Application with OpenMP Tasking Model",
+author="J. Criado and  M. Garcia and  J. Labarta and  A. Chatterjee and   O. Hernandez and  G. Alvarez",
+title="Optimization of CondensedMatter Physics Application with OpenMP Tasking Model",
 journal="Lecture Notes in Computer Science",
 volume="11718",
 pages="PAGES?",
@@ -239,7 +410,7 @@ author="Qinlong Luo and  Andrew Nicholson and  Juli{\'a}n Rinc{\'o}n and  Shuhua
 title="Magnetic States of the Two-Leg Ladder Alkaline Iron Selenides {AFe$_2$Se$_3$}",
 journal="Phys. Rev. B",
 volume="87",
-pages=" 024404",
+pages="024404",
 year="2013"}
 
 @article{re:liang1111,
@@ -323,7 +494,7 @@ pages="151",
 year="2009"}
 
 @article{re:alvarez0309,
-author="	G. Alvarez and M. S. Summers and D. E. Maxwell and M. Eisenbach and J. S. Meredith and J. M. Larkin and J. Levesque and T. A. Maier and P. R. C. Kent and E. F. D'Azevedo and T. C. Schulthess and ",
+author="G. Alvarez and M. S. Summers and D. E. Maxwell and M. Eisenbach and J. S. Meredith and J. M. Larkin and J. Levesque and T. A. Maier and P. R. C. Kent and E. F. D'Azevedo and T. C. Schulthess and ",
 title="New algorithm to enable 400+ TFlop/s sustained performance in simulations of disorder effects in high-Tc superconductors",
 journal="Proceedings of the 2008 ACM/IEEE conference on Supercomputing",
 volume="UNDEFINED",
@@ -385,7 +556,7 @@ year="2007"}
 
 @article{re:sen0207,
 author="C. Sen and  G. Alvarez and  E. Dagotto",
-title=" Competing Ferromagnetic and Charge-Ordered States in Models for Manganites: the Origin of the CMR Effect",
+title="Competing Ferromagnetic and Charge-Ordered States in Models for Manganites: the Origin of the CMR Effect",
 journal="Phys. Rev. Lett.",
 volume="98",
 pages="127202",
@@ -402,7 +573,7 @@ year="2007"}
 @article{re:fishman0406,
 author="R. S. Fishman and  F. Popescu and  G. Alvarez and  J. Moreno and  Th. Maier and  M. Jarrell",
 title="Magnetic Instabilities and Phase Diagram of the Double-Exchange Model in Infinite Dimensions",
-journal="New J. Phys. ",
+journal="New J. Phys.",
 volume="8",
 pages="116",
 year="2006"}
@@ -417,7 +588,7 @@ year="2006"}
 
 @article{re:alvarez0306,
 author="G. Alvarez and  H. Aliaga and  C. Sen and  E. Dagotto",
-title=" Fragility of the A-type AF and CE Phases of Manganites: An Exotic Insulator-to-Metal Transition Induced by Quenched Disorder",
+title="Fragility of the A-type AF and CE Phases of Manganites: An Exotic Insulator-to-Metal Transition Induced by Quenched Disorder",
 journal="Phys. Rev. B",
 volume="73",
 pages="224426",
